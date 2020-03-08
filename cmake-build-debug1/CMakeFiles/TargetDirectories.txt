@@ -1,0 +1,17 @@
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/rebuild_cache.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/projekcik_SDL.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/install/local.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/install.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/edit_cache.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/list_install_components.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/CMakeFiles/install/strip.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/rebuild_cache.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/SDL2-static.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/SDL2main.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/install/local.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/install.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/edit_cache.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/SDL2.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/uninstall.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/list_install_components.dir
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/install/strip.dir

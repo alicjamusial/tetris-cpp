@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="projekcik_SDL"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug1\;CMake Files\cmake-build-debug1\_deps\;CMake Files\cmake-build-debug1\_deps\sdl2-src\;CMake Files\cmake-build-debug1\_deps\sdl2-src\cmake\;CMake Files\cmake-build-debug1\_deps\sdl2-src\include\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekcik_SDL">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/projekcik_SDL.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 projekcik_SDL"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projekcik_SDL/fast">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/projekcik_SDL.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 projekcik_SDL/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL2-static">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/libSDL2-staticd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 SDL2-static"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL2-static/fast">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/libSDL2-staticd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 SDL2-static/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL2main">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/libSDL2maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 SDL2main"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL2main/fast">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/libSDL2maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 SDL2main/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL2">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/SDL2d.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 SDL2"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL2/fast">
+				<Option output="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/SDL2d.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
+					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 SDL2/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL_assert.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL_dataqueue.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL_dataqueue.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL_error.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL_hints.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/SDL_log.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/atomic/SDL_atomic.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/atomic/SDL_spinlock.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_audio.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_audiocvt.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_audiodev.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_audiotypecvt.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_mixer.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_wave.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/SDL_wave.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/disk/SDL_diskaudio.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/disk/SDL_diskaudio.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/dummy/SDL_dummyaudio.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/dummy/SDL_dummyaudio.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/winmm/SDL_winmm.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/audio/winmm/SDL_winmm.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/core/windows/SDL_windows.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/core/windows/SDL_windows.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/core/windows/SDL_xinput.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/core/windows/SDL_xinput.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/cpuinfo/SDL_cpuinfo.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/dynapi/SDL_dynapi.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/dynapi/SDL_dynapi.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_clipboardevents.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_displayevents.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_dropevents.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_events.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_gesture.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_keyboard.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_mouse.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_quit.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_touch.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/events/SDL_windowevents.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/file/SDL_rwops.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/filesystem/windows/SDL_sysfilesystem.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/haptic/SDL_haptic.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/haptic/dummy/SDL_syshaptic.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/hidapi/windows/hid.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/SDL_gamecontroller.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/SDL_joystick.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_gamecube.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_ps4.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_rumble.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_rumble.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_steam.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_switch.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_xbox360.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_xbox360w.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapi_xboxone.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/hidapi/SDL_hidapijoystick.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/windows/SDL_dinputjoystick.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/windows/SDL_mmjoystick.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/windows/SDL_windowsjoystick.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/joystick/windows/SDL_xinputjoystick.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_atan2.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_exp.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_fmod.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_log.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_log10.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_pow.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_rem_pio2.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/e_sqrt.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/k_cos.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/k_rem_pio2.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/k_sin.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/k_tan.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_atan.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_copysign.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_cos.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_fabs.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_floor.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_scalbn.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_sin.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/libm/s_tan.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/loadso/windows/SDL_sysloadso.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/main/windows/SDL_windows_main.c">
+			<Option target="SDL2main"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/main/windows/version.rc">
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/power/SDL_power.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/power/windows/SDL_syspower.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/SDL_d3dmath.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/SDL_d3dmath.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/SDL_render.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/SDL_yuv_sw.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/direct3d/SDL_render_d3d.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/direct3d/SDL_shaders_d3d.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/direct3d/SDL_shaders_d3d.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/direct3d11/SDL_render_d3d11.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/direct3d11/SDL_shaders_d3d11.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/direct3d11/SDL_shaders_d3d11.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengl/SDL_render_gl.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengl/SDL_shaders_gl.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengl/SDL_shaders_gl.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengles/SDL_render_gles.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengles2/SDL_render_gles2.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengles2/SDL_shaders_gles2.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/opengles2/SDL_shaders_gles2.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/psp/SDL_render_psp.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_blendfillrect.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_blendfillrect.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_blendline.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_blendline.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_blendpoint.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_blendpoint.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_drawline.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_drawline.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_drawpoint.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_drawpoint.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_render_sw.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_rotate.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/render/software/SDL_rotate.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/sensor/SDL_sensor.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/sensor/dummy/SDL_dummysensor.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/sensor/dummy/SDL_dummysensor.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_getenv.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_iconv.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_malloc.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_qsort.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_stdlib.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_string.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/stdlib/SDL_strtokr.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/thread/SDL_thread.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/thread/generic/SDL_syscond.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/thread/windows/SDL_sysmutex.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/thread/windows/SDL_syssem.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/thread/windows/SDL_systhread.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/thread/windows/SDL_systls.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/timer/SDL_timer.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/timer/windows/SDL_systimer.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_RLEaccel.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_0.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_1.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_A.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_N.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_auto.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_auto.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_copy.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_copy.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_slow.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_blit_slow.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_bmp.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_clipboard.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_egl.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_fillrect.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_pixels.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_rect.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_shape.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_stretch.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_surface.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_video.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_vulkan_utils.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/SDL_yuv.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/dummy/SDL_nullevents.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/dummy/SDL_nullframebuffer.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/dummy/SDL_nullvideo.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/dummy/SDL_nullvideo.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsclipboard.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsclipboard.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsevents.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsevents.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsframebuffer.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsframebuffer.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowskeyboard.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowskeyboard.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsmessagebox.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsmessagebox.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsmodes.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsmodes.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsmouse.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsmouse.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsopengl.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsopengl.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsopengles.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsopengles.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsshape.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsshape.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsvideo.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsvideo.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsvulkan.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowsvulkan.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowswindow.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/windows/SDL_windowswindow.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/yuv2rgb/yuv_rgb.c">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/video/yuv2rgb/yuv_rgb.h">
+			<Option target="SDL2-static"/>
+			<Option target="SDL2"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/main.cpp">
+			<Option target="projekcik_SDL"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug1\_deps\sdl2-src\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug1\_deps\sdl2-src\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/cmake/macros.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug1\_deps\sdl2-src\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/cmake/sdlchecks.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug1\_deps\sdl2-src\cmake\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include/SDL_config.h.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug1\_deps\sdl2-src\include\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

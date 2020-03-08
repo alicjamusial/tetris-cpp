@@ -7,10 +7,8 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/CMakeDetermineSystem.cmake"
   "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/CMakeGenericSystem.cmake"
   "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/CMakeInitializeConfigs.cmake"
-  "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/CMakeSystem.cmake.in"
   "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake"
   "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake"
   "C:/Program Files/JetBrains/CLion 2019.3.2/bin/cmake/win/share/cmake-3.15/Modules/ExternalProject.cmake"
@@ -33,7 +31,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.15.3/CMakeSystem.cmake"
   "sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-gitinfo.txt"
   "sdl2-populate-prefix/tmp/sdl2-populate-cfgcmd.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"

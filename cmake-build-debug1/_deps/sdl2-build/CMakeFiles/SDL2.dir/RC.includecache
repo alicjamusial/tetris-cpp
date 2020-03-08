@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/main/windows/version.rc
+winresrc.h
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/src/main/windows/winresrc.h
+
