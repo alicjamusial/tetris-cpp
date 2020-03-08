@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule
+D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule

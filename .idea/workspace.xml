@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug1" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b73bc573-6255-4166-badd-87e5cdd262fe" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/cmake-build-debug/_deps/sdl2-src" />
+  </component>
+  <component name="ProjectId" id="1YnoXU9JJF32e9fkhIbgezisgpz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="409" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583661284913">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="409" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583661284913" />
+    <state x="686" y="237" key="FileChooserDialogImpl" timestamp="1583655953740">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="686" y="237" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583655953740" />
+    <state width="1864" height="274" key="GridCell.Tab.0.bottom" timestamp="1583660690756">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583660690756" />
+    <state width="1864" height="274" key="GridCell.Tab.0.center" timestamp="1583660690755">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583660690755" />
+    <state width="1864" height="274" key="GridCell.Tab.0.left" timestamp="1583660690755">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583660690755" />
+    <state width="1864" height="274" key="GridCell.Tab.0.right" timestamp="1583660690755">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583660690755" />
+    <state x="347" y="80" key="SettingsEditor" timestamp="1583661297031">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="347" y="80" key="SettingsEditor/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583661297031" />
+    <state x="588" y="230" width="743" height="620" key="find.popup" timestamp="1583660923676">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="588" y="230" width="743" height="620" key="find.popup/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583660923676" />
+  </component>
+</project>

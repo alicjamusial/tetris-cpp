@@ -1,0 +1,11 @@
+"C:\Program Files\JetBrains\CLion 2019.3.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/MinGW/bin/mingw32-make.exe -DCMAKE_C_COMPILER=C:/MinGW/bin/gcc.exe -DCMAKE_CXX_COMPILER=C:/MinGW/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" D:\Biblioteki\Dokumenty\kurs_udemy\projekcik_SDL
+CMake Error at CMakeLists.txt:18 (add_subdirectory):
+  The source directory
+
+    D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/SDL2
+
+  does not contain a CMakeLists.txt file.
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug/CMakeFiles/CMakeOutput.log".
