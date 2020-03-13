@@ -7,11 +7,9 @@
 #IncludeRegexTransform: 
 
 D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/main.cpp
-iostream
+SDL.h
 -
 stdio.h
--
-SDL.h
 -
 
 _deps/sdl2-src/include/SDL.h

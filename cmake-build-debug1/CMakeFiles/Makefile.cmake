@@ -65,6 +65,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/sdl2-src/cmake/sdlchecks.cmake"
   "_deps/sdl2-src/cmake_uninstall.cmake.in"
   "_deps/sdl2-src/include/SDL_config.h.cmake"
+  "../libs/CMakeLists.txt"
+  "../libs/SDL2/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -75,8 +77,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "_deps/sdl2-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/SDL2/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/sdl2-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

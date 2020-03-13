@@ -79,7 +79,7 @@ projekcik_SDL_EXTERNAL_OBJECTS =
 
 projekcik_SDL.exe: CMakeFiles/projekcik_SDL.dir/main.cpp.obj
 projekcik_SDL.exe: CMakeFiles/projekcik_SDL.dir/build.make
-projekcik_SDL.exe: _deps/sdl2-build/libSDL2d.dll.a
+projekcik_SDL.exe: _deps/sdl2-build/libSDL2-staticd.a
 projekcik_SDL.exe: CMakeFiles/projekcik_SDL.dir/linklibs.rsp
 projekcik_SDL.exe: CMakeFiles/projekcik_SDL.dir/objects1.rsp
 projekcik_SDL.exe: CMakeFiles/projekcik_SDL.dir/link.txt

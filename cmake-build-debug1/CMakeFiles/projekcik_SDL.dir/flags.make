@@ -4,7 +4,7 @@
 # compile CXX with C:/MinGW/bin/g++.exe
 CXX_FLAGS = -g   -std=gnu++17
 
-CXX_DEFINES = 
+CXX_DEFINES = -DSDL_MAIN_HANDLED
 
 CXX_INCLUDES = @CMakeFiles/projekcik_SDL.dir/includes_CXX.rsp
 

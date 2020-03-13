@@ -8,6 +8,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "SDL_MAIN_HANDLED"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "_deps/sdl2-src/include"
@@ -15,7 +20,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/SDL2.dir/DependInfo.cmake"
+  "D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/CMakeFiles/SDL2-static.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

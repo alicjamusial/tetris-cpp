@@ -5,7 +5,7 @@
 		<Option title="projekcik_SDL"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug1\;CMake Files\cmake-build-debug1\_deps\;CMake Files\cmake-build-debug1\_deps\sdl2-src\;CMake Files\cmake-build-debug1\_deps\sdl2-src\cmake\;CMake Files\cmake-build-debug1\_deps\sdl2-src\include\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-debug1\;CMake Files\cmake-build-debug1\_deps\;CMake Files\cmake-build-debug1\_deps\sdl2-src\;CMake Files\cmake-build-debug1\_deps\sdl2-src\cmake\;CMake Files\cmake-build-debug1\_deps\sdl2-src\include\;CMake Files\libs\;CMake Files\libs\SDL2\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1"/>
@@ -34,6 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSDL_MAIN_HANDLED"/>
 					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
@@ -56,6 +57,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSDL_MAIN_HANDLED"/>
 					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
@@ -128,6 +130,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSDL_MAIN_HANDLED"/>
 					<Add option="-DUSING_GENERATED_CONFIG_H"/>
 					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
 					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
@@ -152,6 +155,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DSDL_MAIN_HANDLED"/>
 					<Add option="-DUSING_GENERATED_CONFIG_H"/>
 					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-build/include"/>
 					<Add directory="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include"/>
@@ -1058,6 +1062,12 @@
 		</Unit>
 		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/cmake-build-debug1/_deps/sdl2-src/include/SDL_config.h.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug1\_deps\sdl2-src\include\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/libs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\"/>
+		</Unit>
+		<Unit filename="D:/Biblioteki/Dokumenty/kurs_udemy/projekcik_SDL/libs/SDL2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\SDL2\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

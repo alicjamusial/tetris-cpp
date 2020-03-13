@@ -158,6 +158,7 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
+  "SDL_MAIN_HANDLED"
   "USING_GENERATED_CONFIG_H"
   )
 
