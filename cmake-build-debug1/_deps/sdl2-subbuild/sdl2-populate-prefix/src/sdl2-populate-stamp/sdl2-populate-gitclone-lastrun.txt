@@ -1,3 +1,0 @@
-repository='https://github.com/spurious/SDL-mirror.git'
-module=''
-tag='origin'
