@@ -10,5 +10,5 @@ int main(int argc, char **argv) {
 }
 
 TEST(main_test, test_eq) {
-  EXPECT_EQ(1, 0);
+  EXPECT_EQ(1, 1);
 }

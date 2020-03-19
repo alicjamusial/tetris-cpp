@@ -27,14 +27,16 @@ if(NOT gtest_POPULATED)
             ${gtest_BINARY_DIR}
     )
 
+
     # Silence std::tr1 warning on MSVC
-    if(MSVC)
+#    if(MSVC)
         foreach(_tgt gtest gtest_main gmock gmock_main)
-            target_compile_definitions(${_tgt}
-                    PRIVATE
-                    "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING"
-                    )
+            target_compile_options(${_tgt} PRIVATE -Wno-deprecated-declarations)
+#            target_compile_definitions(${_tgt}
+#                    PRIVATE
+#                    "_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING"
+#                    )
         endforeach()
-    endif()
+#    endif()
 
 endif()
