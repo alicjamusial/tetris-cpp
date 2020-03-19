@@ -21,8 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb985e90-bba9-44cb-89ad-d92dc06b29a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tetris/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tetris/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/libs/gtest/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/libs/gtest/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/tetris_tests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tetris_tests/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/tetris_tests/main_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tetris_tests/main_test.cpp" afterDir="false" />
@@ -51,20 +53,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.advertisement.text.has.clang-format" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/libs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/tetris" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests\tetris" />
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tetris" />
       <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests\libs" />
       <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src" />
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests\tetris" />
       <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests\lib" />
       <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.tetris_test">
+  <component name="RunManager" selected="CMake Application.tetris">
     <configuration name="All in main_test.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="tetris_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tetris" RUN_TARGET_NAME="tetris_test" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/tests/tetris_tests/main_test.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -172,22 +178,26 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2606" y="237" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584602376040" />
-    <state width="1864" height="273" key="GridCell.Tab.0.bottom" timestamp="1584635571482">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1864" height="273" key="GridCell.Tab.0.bottom" timestamp="1584639331940">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1864" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635571482" />
-    <state width="1864" height="273" key="GridCell.Tab.0.center" timestamp="1584635571482">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1864" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584639331940" />
+    <state width="1864" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635700961" />
+    <state width="1864" height="273" key="GridCell.Tab.0.center" timestamp="1584639331940">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1864" height="273" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635571482" />
-    <state width="1864" height="273" key="GridCell.Tab.0.left" timestamp="1584635571482">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1864" height="273" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584639331940" />
+    <state width="1864" height="273" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635700961" />
+    <state width="1864" height="273" key="GridCell.Tab.0.left" timestamp="1584639331940">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1864" height="273" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635571482" />
-    <state width="1864" height="273" key="GridCell.Tab.0.right" timestamp="1584635571482">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1864" height="273" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584639331940" />
+    <state width="1864" height="273" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635700961" />
+    <state width="1864" height="273" key="GridCell.Tab.0.right" timestamp="1584639331940">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1864" height="273" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635571482" />
+    <state width="1864" height="273" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584639331940" />
+    <state width="1864" height="273" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584635700961" />
     <state x="2267" y="80" key="SettingsEditor" timestamp="1584603914214">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
