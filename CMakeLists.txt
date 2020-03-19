@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.15)
-project(projekcik_SDL)
+project(tetris)
 
 set(CMAKE_CXX_STANDARD 17)
 
 include(FetchContent)
 
 add_subdirectory(libs)
+add_subdirectory(tests)
 
-add_executable(projekcik_SDL main.cpp)
-target_link_libraries(projekcik_SDL SDL2-static gtest)
+add_executable(tetris main.cpp)
+target_link_libraries(tetris SDL2-static)

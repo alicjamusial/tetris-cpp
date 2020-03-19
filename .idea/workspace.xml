@@ -2,24 +2,43 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="projekcik_SDL" targetName="SDL2-static" />
-      <config projectName="projekcik_SDL" targetName="SDL2" />
-      <config projectName="projekcik_SDL" targetName="SDL2main" />
-      <config projectName="projekcik_SDL" targetName="uninstall" />
-      <config projectName="projekcik_SDL" targetName="projekcik_SDL" />
+      <config projectName="tetris" targetName="gtest_main" />
+      <config projectName="tetris" targetName="uninstall" />
+      <config projectName="tetris" targetName="SDL2-static" />
+      <config projectName="tetris" targetName="SDL2" />
+      <config projectName="tetris" targetName="gtest" />
+      <config projectName="tetris" targetName="SDL2main" />
+      <config projectName="tetris" targetName="gmock" />
+      <config projectName="tetris" targetName="tetris_test" />
+      <config projectName="tetris" targetName="tetris" />
+      <config projectName="tetris" targetName="gmock_main" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_DIR="build" />
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_DIR="$PROJECT_DIR$/../tetris_build" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b73bc573-6255-4166-badd-87e5cdd262fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/gtest/CMakeLists.txt" afterDir="false" />
+    <list default="true" id="bb985e90-bba9-44cb-89ad-d92dc06b29a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/tetris_src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/libs/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/tetris_tests/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/tetris_tests/main_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projekcik_SDL.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/libs/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/_deps/sdl2-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/SDL2/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/gtest/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="D:\Biblioteki\Dokumenty\kurs_udemy\projekcik_SDL\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1YnoXU9JJF32e9fkhIbgezisgpz" />
+  <component name="ProjectId" id="1ZKyyDORO878yFSkZNn0hPNztzj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,64 +63,80 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/gtest" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/libs" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\projekcik_SDL\libs\gtest" />
-      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\projekcik_SDL\libs\SDL2" />
-      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\projekcik_SDL\libs" />
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests\libs" />
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests\lib" />
+      <recent name="D:\Biblioteki\Dokumenty\kurs_udemy\Tetris\tetris_src\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.projekcik_SDL">
-    <configuration name="SDL2-static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="SDL2-static" CONFIG_NAME="Debug">
+  <component name="RunManager" selected="CMake Application.tetris_test">
+    <configuration name="main_test.test_eq" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="tetris_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tetris" RUN_TARGET_NAME="tetris_test" TEST_CLASS="main_test" TEST_METHOD="test_eq" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SDL2-static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="SDL2-static" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SDL2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="SDL2" CONFIG_NAME="Debug">
+    <configuration name="SDL2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="SDL2" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SDL2main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="SDL2main" CONFIG_NAME="Debug">
+    <configuration name="SDL2main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="SDL2main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="gmock" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="gtest" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="projekcik_SDL" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="projekcik_SDL" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projekcik_SDL" RUN_TARGET_NAME="projekcik_SDL">
+    <configuration name="tetris" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="tetris" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tetris" RUN_TARGET_NAME="tetris">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projekcik_SDL" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
+    <configuration name="tetris_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="tetris_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tetris" RUN_TARGET_NAME="tetris_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tetris" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.projekcik_SDL" />
+      <item itemvalue="CMake Application.tetris" />
+      <item itemvalue="CMake Application.tetris_test" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
@@ -117,7 +145,13 @@
       <item itemvalue="CMake Application.SDL2-static" />
       <item itemvalue="CMake Application.SDL2main" />
       <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="Google Test.main_test.test_eq" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.main_test.test_eq" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -135,83 +169,37 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2329" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584554694485">
+    <state x="2329" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584626532246">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2329" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584554694485" />
-    <state x="409" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583661284913" />
-    <state x="631" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583663345433">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="631" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583663345433" />
-    <state x="686" y="237" key="FileChooserDialogImpl" timestamp="1583661487645">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="686" y="237" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583661487645" />
-    <state width="1846" height="259" key="GridCell.Tab.0.bottom" timestamp="1584571972136">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1846" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584571972136" />
-    <state width="1864" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584562656645" />
-    <state width="1864" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1584134320587" />
-    <state width="1846" height="259" key="GridCell.Tab.0.center" timestamp="1584571972136">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1846" height="259" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584571972136" />
-    <state width="1864" height="259" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584562656645" />
-    <state width="1864" height="260" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1584134320586" />
-    <state width="1846" height="259" key="GridCell.Tab.0.left" timestamp="1584571972136">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1846" height="259" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584571972136" />
-    <state width="1864" height="259" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584562656645" />
-    <state width="1864" height="260" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1584134320586" />
-    <state width="1846" height="259" key="GridCell.Tab.0.right" timestamp="1584571972136">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1846" height="259" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584571972136" />
-    <state width="1864" height="259" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584562656645" />
-    <state width="1864" height="260" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1584134320587" />
-    <state width="1864" height="341" key="GridCell.Tab.1.bottom" timestamp="1583703369153">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1864" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583703369153" />
-    <state width="1864" height="341" key="GridCell.Tab.1.center" timestamp="1583703369153">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1864" height="341" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583703369153" />
-    <state width="1864" height="341" key="GridCell.Tab.1.left" timestamp="1583703369153">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1864" height="341" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583703369153" />
-    <state width="1864" height="341" key="GridCell.Tab.1.right" timestamp="1583703369153">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1864" height="341" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583703369153" />
-    <state x="2267" y="80" key="SettingsEditor" timestamp="1584561982939">
+    <state x="2329" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584626532246" />
+    <state x="2606" y="237" key="FileChooserDialogImpl" timestamp="1584602376040">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2267" y="80" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584561982939" />
-    <state x="347" y="80" key="SettingsEditor/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583661436907" />
-    <state x="57" y="123" width="1738" height="898" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584561069347">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="57" y="123" width="1738" height="898" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584561069347" />
-    <state x="2293" y="139" width="743" height="620" key="find.popup" timestamp="1584561379025">
+    <state x="2606" y="237" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584602376040" />
+    <state width="1864" height="274" key="GridCell.Tab.0.bottom" timestamp="1584630681201">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2293" y="139" width="743" height="620" key="find.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584561379025" />
-    <state x="588" y="230" width="743" height="620" key="find.popup/0.0.1920.1080/1920.0.2560.1440@0.0.1920.1080" timestamp="1583660923676" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>59</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1864" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584630681201" />
+    <state width="1864" height="274" key="GridCell.Tab.0.center" timestamp="1584630681201">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584630681201" />
+    <state width="1864" height="274" key="GridCell.Tab.0.left" timestamp="1584630681201">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584630681201" />
+    <state width="1864" height="274" key="GridCell.Tab.0.right" timestamp="1584630681201">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1864" height="274" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584630681201" />
+    <state x="2267" y="80" key="SettingsEditor" timestamp="1584603914214">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2267" y="80" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584603914214" />
+    <state x="2459" y="45" key="search.everywhere.popup" timestamp="1584603759111">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2459" y="45" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584603759111" />
   </component>
 </project>
