@@ -8,4 +8,4 @@ include(FetchContent)
 add_subdirectory(libs)
 
 add_executable(projekcik_SDL main.cpp)
-target_link_libraries(projekcik_SDL SDL2-static)
+target_link_libraries(projekcik_SDL SDL2-static gtest)
