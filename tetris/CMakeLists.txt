@@ -1,1 +1,9 @@
-add_executable(tetris main.cpp)
+set(NAME tetris)
+
+add_executable(${NAME}
+    main.cpp
+
+    Tetris.cpp
+    Tetris.hpp
+)
+
