@@ -68,23 +68,29 @@ void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
 }
 
 void Gameplay::DrawBoard() {
-  int x1 = screenWidth / 2 - (BOARD_WIDTH * BLOCK_SIZE);
+  int x1 = screenWidth / 2 - (BOARD_WIDTH / 2 * BLOCK_SIZE) - BOARD_LINE_WIDTH / 2 - (MARGIN / 2);
   int y1 = screenHeight - (BOARD_HEIGHT * BLOCK_SIZE);
 
-  int x2 = screenWidth / 2 + (BOARD_WIDTH * BLOCK_SIZE);
+  int x2 = screenWidth / 2 + (BOARD_WIDTH / 2 * BLOCK_SIZE) + BOARD_LINE_WIDTH / 2 + (MARGIN / 2);
   int y2 = screenHeight - (BOARD_HEIGHT * BLOCK_SIZE);
 
   mGraphicInterface->DrawRectangle(x1, y1, BOARD_LINE_WIDTH, BOARD_HEIGHT * BLOCK_SIZE, PRIMARY);
   mGraphicInterface->DrawRectangle(x2, y2, BOARD_LINE_WIDTH, BOARD_HEIGHT * BLOCK_SIZE, PRIMARY);
 
-//  mX1 += 1;
-//  for (int i = 0; i < BOARD_WIDTH; i++) {
-//    for (int j = 0; j < BOARD_HEIGHT; j++) {
-//      if (!mBoard->IsFreeBlock(i, j))
-//        mGraphicInterface->DrawRectangle(mX1 + i * BLOCK_SIZE, mY + j * BLOCK_SIZE, (mX1 + i * BLOCK_SIZE) + BLOCK_SIZE - 1,
-//            (mY + j * BLOCK_SIZE) + BLOCK_SIZE - 1, RED);
-//    }
-//  }
+  for (int i = 0; i < BOARD_WIDTH; i++) {
+    for (int j = 0; j < BOARD_HEIGHT; j++) {
+      if (!mBoard->IsFreeBlock(i, j)) {
+
+      }
+      mGraphicInterface->DrawRectangle(
+          x1 + (i * BLOCK_SIZE) + BOARD_LINE_WIDTH + MARGIN,
+          y1 + (j * BLOCK_SIZE),
+          BLOCK_SIZE - MARGIN,
+          BLOCK_SIZE - MARGIN,
+          THIRD
+      );
+    }
+  }
 }
 
 void Gameplay::DrawScene() {
