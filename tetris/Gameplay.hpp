@@ -10,8 +10,6 @@
 #include "GraphicInterface.hpp"
 #include "Piece.hpp"
 
-#define WAIT_TIME 700
-
 namespace game {
   class Gameplay {
   public:

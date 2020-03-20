@@ -30,9 +30,9 @@ void Board::StorePiece(int pX, int pY, int pPiece, int pRotation) {
   for (int i1 = pX, i2 = 0; i1 < pX + pieceBlocks; i1++, i2++) {
     for (int j1 = pY, j2 = 0; j1 < pY + pieceBlocks; j1++, j2++) {
       // Store blocks that are not holes
-//      if (mPieces->GetBlockType(pPiece, pRotation, j2, i2) != 0) {
-//        mBoard[i1][j1] = POS_FILLED;
-//      }
+      if (mPieces->GetBlockType(pPiece, pRotation, j2, i2) != 0) {
+        mBoard[i1][j1] = POS_FILLED;
+      }
     }
   }
 }
@@ -86,14 +86,14 @@ bool Board::IsPossibleMovement(int pX, int pY, int pPiece, int pRotation) {
     for (int j1 = pY, j2 = 0; j1 < pY + pieceBlocks; j1++, j2++)
     {
       if (i1 < 0 || i1 > boardWidth  - 1 || j1 > boardHeight - 1) {
-//        if (mPieces->GetBlockType(pPiece, pRotation, j2, i2) != 0) {
-//          return false;
-//        }
+        if (mPieces->GetBlockType(pPiece, pRotation, j2, i2) != 0) {
+          return false;
+        }
       }
       if (j1 >= 0) {
-//        if ((mPieces->GetBlockType(pPiece, pRotation, j2, i2) != 0) && (!IsFreeBlock (i1, j1))) {
-//          return false;
-//        }
+        if ((mPieces->GetBlockType(pPiece, pRotation, j2, i2) != 0) && (!IsFreeBlock(i1, j1))) {
+          return false;
+        }
       }
     }
   }

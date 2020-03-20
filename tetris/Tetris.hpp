@@ -22,5 +22,8 @@ namespace game {
 
     bool running {true};
     SDL_Window* window {nullptr};
+
+    float time1;
+    float time2;
   };
 }
