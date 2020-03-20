@@ -10,7 +10,7 @@ namespace game {
   uint16_t const screenWidth {640};
   uint16_t const screenHeight {480};
 
-  uint16_t const timeInterval {700};
+  uint16_t const timeInterval {300};
 
   uint16_t const boardLineWidth {6};
   uint16_t const blockSize {16};

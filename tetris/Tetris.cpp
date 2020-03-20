@@ -46,21 +46,21 @@ Tetris::Tetris() {
           if (event.type == SDL_KEYDOWN) {
             uint16_t key = event.key.keysym.sym;
             switch (key) {
-              case (SDLK_RIGHT): {
+              case (SDLK_d): {
                 if (board.IsPossibleMovement(gameplay.mPosX + 1, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
                   gameplay.mPosX++;
                 }
                 break;
               }
 
-              case (SDLK_LEFT): {
+              case (SDLK_a): {
                 if (board.IsPossibleMovement(gameplay.mPosX - 1, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
                   gameplay.mPosX--;
                 }
                 break;
               }
 
-              case (SDLK_DOWN): {
+              case (SDLK_s): {
                 if (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY + 1, gameplay.mPiece, gameplay.mRotation)) {
                   gameplay.mPosY++;
                 }

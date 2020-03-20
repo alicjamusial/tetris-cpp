@@ -16,17 +16,15 @@ namespace game {
     Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface);
 
     void DrawScene();
-
     void CreateNewPiece();
 
-    // params for current falling piece
-    int mPosX, mPosY;
-    int mPiece, mRotation;
+    // current falling piece
+    int mPosX{}, mPosY{};
+    int mPiece{}, mRotation{};
 
   private:
-    int mScreenHeight;
-    int mNextPosX, mNextPosY;
-    int mNextPiece, mNextRotation;
+    int mNextPosX{}, mNextPosY{};
+    int mNextPiece{}, mNextRotation{};
 
     Board *board;
     Piece *pieces;
