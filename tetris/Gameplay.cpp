@@ -60,8 +60,12 @@ void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
       }
 
       if (pieces->GetBlockType (pPiece, pRotation, j, i) != 0) {
-        mGraphicInterface->DrawRectangle(mPixelsX + i * blockSize, mPixelsY + j * blockSize,
-            blockSize, blockSize, mColor);
+        mGraphicInterface->DrawRectangle(
+            mPixelsX + i * blockSize,
+            mPixelsY + j * blockSize,
+            blockSize,
+            blockSize,
+            mColor);
       }
     }
   }
@@ -80,8 +84,7 @@ void Gameplay::DrawBoard() {
             boardLineY1 + (j * blockSize),
             blockSize - blockMargin,
             blockSize - blockMargin,
-            ColorThird
-        );
+            ColorThird);
       }
     }
   }
@@ -90,5 +93,5 @@ void Gameplay::DrawBoard() {
 void Gameplay::DrawScene() {
   DrawBoard();
   DrawPiece(mPosX, mPosY, mPiece, mRotation);
-//  DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
+  DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
 }

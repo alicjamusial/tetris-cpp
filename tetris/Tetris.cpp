@@ -36,15 +36,72 @@ Tetris::Tetris() {
         SDL_Event event;
 
         while (SDL_PollEvent(&event)) {
-          if (event.type == SDL_QUIT)
+          if (event.type == SDL_KEYDOWN) {
+            uint16_t key = event.key.keysym.sym;
+            switch (key)
+            {
+              case (SDLK_RIGHT):
+              {
+                if (board.IsPossibleMovement(gameplay.mPosX + 1, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
+                  gameplay.mPosX++;
+                }
+                break;
+              }
+
+              case (SDLK_LEFT):
+              {
+                if (board.IsPossibleMovement(gameplay.mPosX - 1, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
+                  gameplay.mPosX--;
+                }
+                break;
+              }
+
+              case (SDLK_DOWN):
+              {
+                if (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY + 1, gameplay.mPiece, gameplay.mRotation)) {
+                  gameplay.mPosY++;
+                }
+                break;
+              }
+
+              case (SDLK_x):
+              {
+                while (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
+                  gameplay.mPosY++;
+                }
+
+                board.StorePiece(gameplay.mPosX, gameplay.mPosY - 1, gameplay.mPiece, gameplay.mRotation);
+
+                board.DeletePossibleLines();
+
+                if (board.IsGameOver())
+                {
+                  // mIO.Getkey();
+                  // exit(0);
+                  // todo: gameover
+                }
+
+                gameplay.CreateNewPiece();
+
+                break;
+              }
+              case (SDLK_z):
+              {
+                if (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY, gameplay.mPiece, (gameplay.mRotation + 1) % 4)) {
+                  gameplay.mRotation = (gameplay.mRotation + 1) % 4;
+                }
+                break;
+              }
+            }
+          }
+          if (event.type == SDL_QUIT) {
             running = false;
+          }
         }
 
         graphicInterface.ClearScreen();
         gameplay.DrawScene();
         graphicInterface.UpdateScreen();
-
-
 
       }
       SDL_DestroyWindow(window);
