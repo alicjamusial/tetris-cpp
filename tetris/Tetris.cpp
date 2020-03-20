@@ -6,7 +6,7 @@
 #include <SDL.h>
 
 #include "Tetris.hpp"
-#include "constants.hpp"
+#include "settings.hpp"
 
 using namespace game;
 

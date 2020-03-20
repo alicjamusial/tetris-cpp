@@ -5,7 +5,7 @@
 #pragma once
 
 #include <SDL.h>
-#include "constants.hpp"
+#include "settings.hpp"
 
 namespace game {
 

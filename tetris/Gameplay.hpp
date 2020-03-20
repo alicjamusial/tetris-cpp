@@ -30,7 +30,7 @@ namespace game {
     Piece *pieces;
     GraphicInterface *mGraphicInterface;
 
-    int GetRand(int pA, int pB);
+    static int GetRand(int pA, int pB);
 
     void InitGameplay();
 

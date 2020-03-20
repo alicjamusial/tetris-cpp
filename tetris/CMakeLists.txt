@@ -2,7 +2,7 @@ set(NAME tetris)
 
 add_executable(${NAME}
         main.cpp
-        constants.hpp
+        settings.hpp
 
         Gameplay.cpp
         Gameplay.hpp

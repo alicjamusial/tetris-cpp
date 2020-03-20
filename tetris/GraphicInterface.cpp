@@ -4,7 +4,7 @@
 
 #include "GraphicInterface.hpp"
 #include "SDL.h"
-#include "constants.hpp"
+#include "settings.hpp"
 
 using namespace game;
 

@@ -4,7 +4,7 @@
 #pragma once
 
 #include "Piece.hpp"
-#include "constants.hpp"
+#include "settings.hpp"
 
 namespace game {
   class Board {

@@ -4,7 +4,7 @@
 
 #include <cstdlib>
 #include "Gameplay.hpp"
-#include "constants.hpp"
+#include "settings.hpp"
 
 using namespace game;
 
@@ -22,7 +22,7 @@ int Gameplay::GetRand(int pA, int pB) {
 }
 
 void Gameplay::InitGameplay() {
-  srand((unsigned int) time(NULL));
+  srand((unsigned int) time(nullptr));
 
   mPiece = GetRand(0, 6);
   mRotation = GetRand(0, 3);
