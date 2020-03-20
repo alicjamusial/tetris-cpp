@@ -21,7 +21,7 @@ SDL_Renderer *GraphicInterface::GetRenderer() {
 }
 
 void GraphicInterface::ClearScreen() {
-  colorEnum boardColor = FOURTH;
+  colorEnum boardColor = ColorBoard;
   SDL_SetRenderDrawColor(
       renderer,
       colorsMap[boardColor][0],

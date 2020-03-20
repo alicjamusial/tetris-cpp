@@ -30,8 +30,8 @@ namespace game {
     int mNextPosX, mNextPosY;
     int mNextPiece, mNextRotation;
 
-    Board *mBoard;
-    Piece *mPieces;
+    Board *board;
+    Piece *pieces;
     GraphicInterface *mGraphicInterface;
 
     int GetRand(int pA, int pB);

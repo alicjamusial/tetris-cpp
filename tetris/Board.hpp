@@ -4,17 +4,9 @@
 #pragma once
 
 #include "Piece.hpp"
+#include "constants.hpp"
 
 namespace game {
-
-#define BOARD_LINE_WIDTH 6
-#define BLOCK_SIZE 16
-#define BOARD_POSITION 320
-#define MARGIN 2
-#define BOARD_WIDTH 10
-#define BOARD_HEIGHT 20
-#define PIECE_BLOCKS 5
-
   class Board {
   public:
     Board();
@@ -41,7 +33,7 @@ namespace game {
     };
     Piece *mPieces;
     int mScreenHeight;
-    int mBoard[BOARD_WIDTH][BOARD_HEIGHT];
+    int mBoard[boardWidth][boardHeight];
 
     void InitBoard();
 
