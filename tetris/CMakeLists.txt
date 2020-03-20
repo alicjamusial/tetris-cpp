@@ -14,5 +14,5 @@ add_executable(${NAME}
 
     Board.cpp
     Board.hpp
-)
+        constants.hpp)
 

@@ -3,8 +3,6 @@
 using namespace game;
 
 int main(int argc, char* args[]) {
-
-  Tetris();
-
+  Tetris tetris;
   return 0;
 }

@@ -18,13 +18,10 @@ namespace game {
     static void showError(const std::string& errorMsg);
 
   private:
-    uint16_t const screenWidth {640};
-    uint16_t const screenHeight {480};
     std::string windowTitle {"Tetris"};
 
     bool running {true};
     SDL_Window* window {nullptr};
-    SDL_Surface* screenSurface {nullptr};
 
     Board board;
   };

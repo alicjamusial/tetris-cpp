@@ -6,6 +6,7 @@
 #include <SDL.h>
 
 #include "Tetris.hpp"
+#include "constants.hpp"
 
 using namespace game;
 
@@ -25,31 +26,36 @@ Tetris::Tetris() {
     if (window == nullptr) {
       showError("Window could not be created!");
     } else {
-      screenSurface = SDL_GetWindowSurface(window);
 
-      SDL_FillRect(
-          screenSurface,
-          nullptr,
-          SDL_MapRGB( screenSurface->format, 0xFF, 0xFF, 0xFF));
+      GraphicInterface graphicInterface {window};
 
-      SDL_UpdateWindowSurface(window);
+      if (graphicInterface.getRenderer() == nullptr) {
+        showError("Renderer could not be created!");
+      } else {
 
-      while (running) {
-        SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-          /* handle your event here */
+        while (running) {
+          SDL_Event event;
 
-          if(event.type == SDL_QUIT)
-            running = false;
+          while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_QUIT)
+              running = false;
+          }
+          
+          graphicInterface.ClearScreen();
+          graphicInterface.UpdateScreen();
+
+
+//          gameplay.DrawScene ();
+
         }
+        SDL_DestroyWindow(window);
+        SDL_Quit();
       }
     }
   }
-
-  SDL_DestroyWindow(window);
-  SDL_Quit();
 }
 
 void Tetris::showError(const std::string& errorMsg) {
   printf("%s SDL_Error: %s\n", errorMsg.c_str(), SDL_GetError());
 }
+
