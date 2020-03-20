@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include "Gameplay.hpp"
+#include "constants.hpp"
 
 using namespace game;
 
@@ -45,7 +46,7 @@ void Gameplay::CreateNewPiece() {
 }
 
 void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
-  color mColor;
+  colorEnum mColor;
 
   int mPixelsX = mBoard->GetXPosInPixels(pX);
   int mPixelsY = mBoard->GetYPosInPixels(pY);
@@ -54,8 +55,8 @@ void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
     for (int j = 0; j < PIECE_BLOCKS; j++) {
       switch (mPieces->GetBlockType(pPiece, pRotation, j, i))
       {
-        case 1: mColor = GREEN; break;
-        case 2: mColor = BLUE; break;
+        case 1: mColor = PRIMARY; break;
+        case 2: mColor = SECONDARY; break;
       }
 
       if (mPieces->GetBlockType (pPiece, pRotation, j, i) != 0) {
@@ -67,21 +68,23 @@ void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
 }
 
 void Gameplay::DrawBoard() {
-  int mX1 = BOARD_POSITION - (BLOCK_SIZE * (BOARD_WIDTH / 2)) - 1;
-  int mX2 = BOARD_POSITION + (BLOCK_SIZE * (BOARD_WIDTH / 2));
-  int mY = mScreenHeight - (BLOCK_SIZE * BOARD_HEIGHT);
+  int x1 = screenWidth / 2 - (BOARD_WIDTH * BLOCK_SIZE);
+  int y1 = screenHeight - (BOARD_HEIGHT * BLOCK_SIZE);
 
-  mGraphicInterface->DrawRectangle(mX1 - BOARD_LINE_WIDTH, mY, mX1, mScreenHeight - 1, BLUE);
-  mGraphicInterface->DrawRectangle(mX2, mY, mX2 + BOARD_LINE_WIDTH, mScreenHeight - 1, BLUE);
+  int x2 = screenWidth / 2 + (BOARD_WIDTH * BLOCK_SIZE);
+  int y2 = screenHeight - (BOARD_HEIGHT * BLOCK_SIZE);
 
-  mX1 += 1;
-  for (int i = 0; i < BOARD_WIDTH; i++) {
-    for (int j = 0; j < BOARD_HEIGHT; j++) {
-      if (!mBoard->IsFreeBlock(i, j))
-        mGraphicInterface->DrawRectangle(mX1 + i * BLOCK_SIZE, mY + j * BLOCK_SIZE, (mX1 + i * BLOCK_SIZE) + BLOCK_SIZE - 1,
-            (mY + j * BLOCK_SIZE) + BLOCK_SIZE - 1, RED);
-    }
-  }
+  mGraphicInterface->DrawRectangle(x1, y1, BOARD_LINE_WIDTH, BOARD_HEIGHT * BLOCK_SIZE, PRIMARY);
+  mGraphicInterface->DrawRectangle(x2, y2, BOARD_LINE_WIDTH, BOARD_HEIGHT * BLOCK_SIZE, PRIMARY);
+
+//  mX1 += 1;
+//  for (int i = 0; i < BOARD_WIDTH; i++) {
+//    for (int j = 0; j < BOARD_HEIGHT; j++) {
+//      if (!mBoard->IsFreeBlock(i, j))
+//        mGraphicInterface->DrawRectangle(mX1 + i * BLOCK_SIZE, mY + j * BLOCK_SIZE, (mX1 + i * BLOCK_SIZE) + BLOCK_SIZE - 1,
+//            (mY + j * BLOCK_SIZE) + BLOCK_SIZE - 1, RED);
+//    }
+//  }
 }
 
 void Gameplay::DrawScene() {

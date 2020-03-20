@@ -5,12 +5,9 @@
 #pragma once
 
 #include <SDL.h>
+#include "constants.hpp"
 
 namespace game {
-
-  enum color {
-    BLACK, RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, WHITE, COLOR_MAX
-  };
 
   class GraphicInterface {
   public:
@@ -22,7 +19,7 @@ namespace game {
 
     SDL_Renderer* GetRenderer();
 
-    void DrawRectangle(int pX1, int pY1, int pX2, int pY2, enum color pC);
+    void DrawRectangle(int pX1, int pY1, int pX2, int pY2, enum colorEnum pC);
 
     void ClearScreen();
 

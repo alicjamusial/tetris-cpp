@@ -21,22 +21,29 @@ SDL_Renderer *GraphicInterface::GetRenderer() {
 }
 
 void GraphicInterface::ClearScreen() {
-  SDL_SetRenderDrawColor(renderer, 0x81, 0x66, 0x7a, 0xFF);
+  SDL_SetRenderDrawColor(
+      renderer,
+      colorsMap[BOARD][0],
+      colorsMap[BOARD][1],
+      colorsMap[BOARD][2],
+      colorsMap[BOARD][3]
+      );
   SDL_RenderClear(renderer);
 }
 
 
-void GraphicInterface::DrawRectangle (int pX1, int pY1, int pX2, int pY2, enum color pC) {
-  SDL_Rect fillRect = {pX1, pY1, pX2, pY2-1};
-  SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
+void GraphicInterface::DrawRectangle(int x, int y, int w, int h, enum colorEnum color) {
+
+  SDL_Rect fillRect = {x, y, w, h};
+  SDL_SetRenderDrawColor(
+      renderer,
+      colorsMap[color][0],
+      colorsMap[color][1],
+      colorsMap[color][2],
+      colorsMap[color][3]
+  );
   SDL_RenderFillRect(renderer, &fillRect);
 }
-//
-//
-//int GraphicInterface::GetScreenHeight() {
-//  return mScreen->h;
-//}
-
 
 void GraphicInterface::UpdateScreen() {
 //  SDL_Rect fillRect = {screenWidth / 4, screenHeight / 4, screenWidth / 2, screenHeight / 2};
