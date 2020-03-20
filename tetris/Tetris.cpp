@@ -29,7 +29,7 @@ Tetris::Tetris() {
 
       SDL_FillRect(
           screenSurface,
-          NULL,
+          nullptr,
           SDL_MapRGB( screenSurface->format, 0xFF, 0xFF, 0xFF));
 
       SDL_UpdateWindowSurface(window);
@@ -46,7 +46,7 @@ Tetris::Tetris() {
     }
   }
 
-  SDL_DestroyWindow( window );
+  SDL_DestroyWindow(window);
   SDL_Quit();
 }
 

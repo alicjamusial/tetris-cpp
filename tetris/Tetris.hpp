@@ -5,6 +5,10 @@
 #include <string>
 #include <cstdint>
 #include <SDL.h>
+#include "GraphicInterface.hpp"
+#include "Piece.hpp"
+#include "Board.hpp"
+#include "Gameplay.hpp"
 
 namespace game {
   class Tetris {
@@ -21,5 +25,7 @@ namespace game {
     bool running {true};
     SDL_Window* window {nullptr};
     SDL_Surface* screenSurface {nullptr};
+
+    Board board;
   };
 }

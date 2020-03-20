@@ -5,5 +5,14 @@ add_executable(${NAME}
 
     Tetris.cpp
     Tetris.hpp
+
+    Gameplay.cpp
+    Gameplay.hpp
+
+    GraphicInterface.cpp
+    GraphicInterface.hpp
+
+    Board.cpp
+    Board.hpp
 )
 
