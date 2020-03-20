@@ -20,7 +20,7 @@ namespace game {
   public:
     Board();
 
-    Board(Piece *pPieces, int pScreenHeight);
+    Board(Piece *pPieces);
 
     int GetXPosInPixels(int pPos);
 

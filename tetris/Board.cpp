@@ -3,6 +3,7 @@
 //
 
 #include "Board.hpp"
+#include "constants.hpp"
 
 using namespace game;
 
@@ -10,8 +11,8 @@ Board::Board() {
   InitBoard();
 }
 
-Board::Board(Piece *pPieces, int pScreenHeight) {
-  mScreenHeight = pScreenHeight;
+Board::Board(Piece *pPieces) {
+  mScreenHeight = screenHeight;
   mPieces = pPieces;
   InitBoard();
 }

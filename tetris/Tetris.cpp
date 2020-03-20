@@ -27,30 +27,28 @@ Tetris::Tetris() {
       showError("Window could not be created!");
     } else {
 
+      Piece piece;
       GraphicInterface graphicInterface {window};
+      Board board {&piece};
+      Gameplay gameplay(&board, &piece, &graphicInterface);
 
-      if (graphicInterface.getRenderer() == nullptr) {
-        showError("Renderer could not be created!");
-      } else {
+      while (running) {
+        SDL_Event event;
 
-        while (running) {
-          SDL_Event event;
-
-          while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT)
-              running = false;
-          }
-          
-          graphicInterface.ClearScreen();
-          graphicInterface.UpdateScreen();
-
-
-//          gameplay.DrawScene ();
-
+        while (SDL_PollEvent(&event)) {
+          if (event.type == SDL_QUIT)
+            running = false;
         }
-        SDL_DestroyWindow(window);
-        SDL_Quit();
+
+        graphicInterface.ClearScreen();
+        gameplay.DrawScene();
+        graphicInterface.UpdateScreen();
+
+
+
       }
+      SDL_DestroyWindow(window);
+      SDL_Quit();
     }
   }
 }

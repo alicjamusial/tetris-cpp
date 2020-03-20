@@ -1,18 +1,22 @@
 set(NAME tetris)
 
 add_executable(${NAME}
-    main.cpp
+        main.cpp
+        constants.hpp
 
-    Tetris.cpp
-    Tetris.hpp
+        Gameplay.cpp
+        Gameplay.hpp
 
-    Gameplay.cpp
-    Gameplay.hpp
+        GraphicInterface.cpp
+        GraphicInterface.hpp
 
-    GraphicInterface.cpp
-    GraphicInterface.hpp
+        Board.cpp
+        Board.hpp
 
-    Board.cpp
-    Board.hpp
-        constants.hpp)
+        Piece.cpp
+        Piece.hpp
+
+        Tetris.cpp
+        Tetris.hpp
+)
 

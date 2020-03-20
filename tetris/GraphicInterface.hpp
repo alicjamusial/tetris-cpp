@@ -15,7 +15,12 @@ namespace game {
   class GraphicInterface {
   public:
     GraphicInterface(SDL_Window *window);
+
     ~GraphicInterface();
+
+    void InitWindow(SDL_Window* window);
+
+    SDL_Renderer* GetRenderer();
 
     void DrawRectangle(int pX1, int pY1, int pX2, int pY2, enum color pC);
 
@@ -32,8 +37,6 @@ namespace game {
     int IsKeyDown(int pKey);
 
     void UpdateScreen();
-
-    SDL_Renderer* getRenderer();
 
   private:
     SDL_Renderer* renderer {nullptr};

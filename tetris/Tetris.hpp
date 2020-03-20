@@ -22,7 +22,5 @@ namespace game {
 
     bool running {true};
     SDL_Window* window {nullptr};
-
-    Board board;
   };
 }
