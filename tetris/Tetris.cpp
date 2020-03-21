@@ -15,7 +15,6 @@ Tetris::Tetris() {
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     showError("SDL could not initialize!");
   } else {
-    //Create window
     window = SDL_CreateWindow(
         windowTitle.c_str(),
         SDL_WINDOWPOS_CENTERED,

@@ -11,27 +11,13 @@ namespace game {
 
   class GraphicInterface {
   public:
-    GraphicInterface(SDL_Window *window);
+    explicit GraphicInterface(SDL_Window *window);
 
     ~GraphicInterface();
-
-    void InitWindow(SDL_Window* window);
-
-    SDL_Renderer* GetRenderer();
 
     void DrawRectangle(int pX1, int pY1, int pX2, int pY2, enum colorEnum pC);
 
     void ClearScreen();
-
-    int GetScreenHeight();
-
-    int InitGraph();
-
-    int Pollkey();
-
-    int Getkey();
-
-    int IsKeyDown(int pKey);
 
     void UpdateScreen();
 

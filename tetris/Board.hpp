@@ -9,7 +9,6 @@
 namespace game {
   class Board {
   public:
-
     Board(Piece *pPieces);
 
     static int GetXPosInPixels(int pPos);

@@ -17,38 +17,44 @@ Gameplay::Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInte
   InitGameplay();
 }
 
-int Gameplay::GetRand(int max) {
-  return rand() % max + 1;
-}
-
 void Gameplay::InitGameplay() {
   srand((unsigned int) time(nullptr));
 
+  // Init current falling piece
   mPiece = GetRand(6);
   mRotation = GetRand(3);
   mPosX = halfBoardWidth + pieces->GetXInitialPosition(mPiece, mRotation);
   mPosY = pieces->GetYInitialPosition(mPiece, mRotation);
 
+  // Init next piece next to board
   mNextPiece = GetRand(6);
   mNextRotation = GetRand(3);
-  mNextPosX = boardWidth + 5;
-  mNextPosY = 5;
+  mNextPosX = boardWidth + nextPieceMargin;
+  mNextPosY = nextPieceMargin;
+}
+
+void Gameplay::DrawScene() {
+  DrawBoard();
+  DrawPiece(mPosX, mPosY, mPiece, mRotation);
+  DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
 }
 
 void Gameplay::CreateNewPiece() {
+  // Get next piece and make it current
   mPiece = mNextPiece;
   mRotation = mNextRotation;
   mPosX = halfBoardWidth + pieces->GetXInitialPosition(mPiece, mRotation);
   mPosY = pieces->GetYInitialPosition(mPiece, mRotation);
 
+  // Init new next piece
   mNextPiece = GetRand(6);
   mNextRotation = GetRand(3);
 }
 
-void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
+void Gameplay::DrawPiece(int pX, int pY, int pPiece, int pRotation) {
 
-  int mPixelsX = board->GetXPosInPixels(pX);
-  int mPixelsY = board->GetYPosInPixels(pY);
+  int mPixelsX = game::Board::GetXPosInPixels(pX);
+  int mPixelsY = game::Board::GetYPosInPixels(pY);
 
   for (int i = 0; i < pieceBlocks; i++) {
     for (int j = 0; j < pieceBlocks; j++) {
@@ -86,8 +92,6 @@ void Gameplay::DrawBoard() {
   }
 }
 
-void Gameplay::DrawScene() {
-  DrawBoard();
-  DrawPiece(mPosX, mPosY, mPiece, mRotation);
-  DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
+int Gameplay::GetRand(int max) {
+  return rand() % max + 1;
 }

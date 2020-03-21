@@ -30,12 +30,12 @@ namespace game {
     Piece *pieces;
     GraphicInterface *mGraphicInterface;
 
-    static int GetRand(int max);
-
     void InitGameplay();
 
     void DrawPiece(int pX, int pY, int pPiece, int pRotation);
 
     void DrawBoard();
+
+    static int GetRand(int max);
   };
 }

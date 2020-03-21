@@ -15,6 +15,7 @@ namespace game {
   uint16_t const boardLineWidth {6};
   uint16_t const blockSize {16};
   uint16_t const blockMargin {2};
+  uint16_t const nextPieceMargin {5};
   uint16_t const boardWidth {10};
   uint16_t const boardHeight {20};
   uint16_t const pieceBlocks {5};
