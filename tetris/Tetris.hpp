@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <SDL.h>
 #include "GraphicInterface.hpp"
-#include "Piece.hpp"
+#include "PieceDefinition.hpp"
 #include "Board.hpp"
 #include "Gameplay.hpp"
 

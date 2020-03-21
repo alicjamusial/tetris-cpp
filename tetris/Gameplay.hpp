@@ -8,7 +8,7 @@
 #include <ctime>
 #include "Board.hpp"
 #include "GraphicInterface.hpp"
-#include "Piece.hpp"
+#include "PieceDefinition.hpp"
 
 namespace game {
 
@@ -16,7 +16,7 @@ namespace game {
 
   class Gameplay {
   public:
-    Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface);
+    Gameplay(Board *pBoard, GraphicInterface *pGraphicInterface);
 
     void DrawScene();
     void CreateNewPiece();
@@ -41,7 +41,7 @@ namespace game {
     int16_t mNextPiece{}, mNextRotation{};
 
     Board *board;
-    Piece *pieces;
+    PieceDefinition *pieces{};
     GraphicInterface *graphicInterface;
 
     void InitGameplay();

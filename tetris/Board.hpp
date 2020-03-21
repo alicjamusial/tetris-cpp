@@ -3,13 +3,13 @@
 //
 #pragma once
 
-#include "Piece.hpp"
+#include "PieceDefinition.hpp"
 #include "settings.hpp"
 
 namespace game {
   class Board {
   public:
-    Board(Piece *pPieces);
+    Board();
 
     static int GetXPosInPixels(int pPos);
 
@@ -32,7 +32,6 @@ namespace game {
       POS_FREE, POS_FILLED
     };
 
-    Piece *boardPieces;
     int boardFields[boardWidth][boardHeight]{};
 
     void InitBoard();

@@ -15,8 +15,8 @@ add_executable(${NAME}
         Board.cpp
         Board.hpp
 
-        Piece.cpp
-        Piece.hpp
+        PieceDefinition.cpp
+        PieceDefinition.hpp
 
         Tetris.cpp
         Tetris.hpp

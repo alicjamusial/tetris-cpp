@@ -8,9 +8,8 @@
 
 using namespace game;
 
-Gameplay::Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface) {
+Gameplay::Gameplay(Board *pBoard, GraphicInterface *pGraphicInterface) {
   board = pBoard;
-  pieces = pPieces;
   graphicInterface = pGraphicInterface;
 
   InitGameplay();
@@ -22,8 +21,8 @@ void Gameplay::InitGameplay() {
   // Init current falling piece
   mPiece = GetRand(6);
   mRotation = GetRand(3);
-  mPosX = halfBoardWidth + pieces->GetXInitialPosition(mPiece, mRotation);
-  mPosY = pieces->GetYInitialPosition(mPiece, mRotation);
+  mPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(mPiece, mRotation);
+  mPosY = PieceDefinition::GetYInitialPosition(mPiece, mRotation);
 
   // Init next piece next to board
   mNextPiece = GetRand(6);
@@ -108,8 +107,8 @@ void Gameplay::CreateNewPiece() {
   // Get next piece and make it current
   mPiece = mNextPiece;
   mRotation = mNextRotation;
-  mPosX = halfBoardWidth + pieces->GetXInitialPosition(mPiece, mRotation);
-  mPosY = pieces->GetYInitialPosition(mPiece, mRotation);
+  mPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(mPiece, mRotation);
+  mPosY = PieceDefinition::GetYInitialPosition(mPiece, mRotation);
 
   // Init new next piece
   mNextPiece = GetRand(6);
@@ -124,9 +123,9 @@ void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t pPiece, int16_t pRotati
   for (int16_t i = 0; i < pieceBlocks; i++) {
     for (int16_t j = 0; j < pieceBlocks; j++) {
 
-      colorEnum pieceColor = pieces->GetBlockType(pPiece, pRotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
+      colorEnum pieceColor = PieceDefinition::GetBlockType(pPiece, pRotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
 
-      if (pieces->GetBlockType(pPiece, pRotation, j, i) != Blank) {
+      if (PieceDefinition::GetBlockType(pPiece, pRotation, j, i) != Blank) {
         graphicInterface->DrawRectangle(
             mPixelsX + (i * blockSize) + boardLineWidth + blockMargin,
             mPixelsY + j * blockSize,

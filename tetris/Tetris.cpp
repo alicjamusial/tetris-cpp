@@ -26,10 +26,9 @@ Tetris::Tetris() {
       showError("Window could not be created!");
     } else {
 
-      Piece piece;
       GraphicInterface graphicInterface {window};
-      Board board {&piece};
-      Gameplay gameplay(&board, &piece, &graphicInterface);
+      Board board;
+      Gameplay gameplay(&board, &graphicInterface);
 
       time1 = SDL_GetTicks();
 
