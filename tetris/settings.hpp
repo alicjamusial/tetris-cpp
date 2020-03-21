@@ -37,12 +37,5 @@ namespace game {
   constexpr uint16_t boardLineX2 {screenWidth / 2 + (halfBoardWidth * blockSize) + boardLineWidth / 2 + halfBlockMargin};
   constexpr uint16_t boardLineY2 {screenHeight - (boardHeight * blockSize)};
 
-  enum colorEnum {ColorBoard, ColorPrimary, ColorThird};
-
-  uint32_t const colorsMap[][4] = {
-      {0x8c, 0x8a, 0x93, 0xFF},
-      {0xd1, 0xf0, 0xb1, 0xFF},
-      {0xb6, 0xcb, 0x9e, 0xFF},
-  };
-
+  enum class ColorEnum {ColorBoard, ColorPrimary, ColorThird};
 }

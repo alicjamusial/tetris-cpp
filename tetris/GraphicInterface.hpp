@@ -5,6 +5,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <vector>
 #include "settings.hpp"
 
 namespace game {
@@ -15,7 +16,7 @@ namespace game {
 
     ~GraphicInterface();
 
-    void DrawRectangle(int16_t pX1, int16_t pY1, int16_t pX2, int16_t pY2, enum colorEnum pC);
+    void DrawRectangle(int16_t pX1, int16_t pY1, int16_t pX2, int16_t pY2, ColorEnum pC);
 
     void ClearScreen();
 
@@ -34,6 +35,8 @@ namespace game {
                                      gameOverImgWidth, gameOverImgHeight};
     SDL_Rect const _legendImgPosition = {screenWidth / 2 - legendImgWidth / 2, legendMargin,
                                          legendImgWidth, legendImgHeight};
+
+    std::map<ColorEnum, std::vector<uint32_t>> _colorsMap;
 
     void InitImages();
   };

@@ -123,7 +123,7 @@ void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation
   for (int16_t i = 0; i < pieceBlocks; i++) {
     for (int16_t j = 0; j < pieceBlocks; j++) {
 
-      colorEnum currentPieceColor = PieceDefinition::GetBlockType(piece, rotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
+      ColorEnum currentPieceColor = PieceDefinition::GetBlockType(piece, rotation, j, i) == RotationPiece ? ColorEnum::ColorThird : ColorEnum::ColorPrimary;
 
       if (PieceDefinition::GetBlockType(piece, rotation, j, i) != Blank) {
         _graphicInterface->DrawRectangle(
@@ -140,8 +140,8 @@ void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation
 void Gameplay::DrawBoardAndLegend() {
 
   _graphicInterface->DrawLegend();
-  _graphicInterface->DrawRectangle(boardLineX1, boardLineY1, boardLineWidth, boardHeight * blockSize, ColorPrimary);
-  _graphicInterface->DrawRectangle(boardLineX2, boardLineY2, boardLineWidth, boardHeight * blockSize, ColorPrimary);
+  _graphicInterface->DrawRectangle(boardLineX1, boardLineY1, boardLineWidth, boardHeight * blockSize, ColorEnum::ColorPrimary);
+  _graphicInterface->DrawRectangle(boardLineX2, boardLineY2, boardLineWidth, boardHeight * blockSize, ColorEnum::ColorPrimary);
 
   for (int16_t i = 0; i < boardWidth; i++) {
     for (int16_t j = 0; j < boardHeight; j++) {
@@ -151,7 +151,7 @@ void Gameplay::DrawBoardAndLegend() {
             boardLineY1 + (j * blockSize),
             blockSize - blockMargin,
             blockSize - blockMargin,
-            ColorPrimary);
+            ColorEnum::ColorPrimary);
       }
     }
   }
