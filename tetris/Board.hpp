@@ -11,15 +11,15 @@ namespace game {
   public:
     Board();
 
-    static int GetXPosInPixels(int pPos);
+    static int16_t GetXPosInPixels(int16_t pPos);
 
-    static int GetYPosInPixels(int pPos);
+    static int16_t GetYPosInPixels(int16_t pPos);
 
-    bool IsFreeBlock(int pX, int pY);
+    bool IsFreeBlock(int16_t pX, int16_t pY);
 
-    bool IsPossibleMovement(int pX, int pY, int pPiece, int pRotation);
+    bool IsPossibleMovement(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
 
-    void StorePiece(int pX, int pY, int pPiece, int pRotation);
+    void StorePiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
 
     void DeletePossibleLines();
 
@@ -32,11 +32,11 @@ namespace game {
       POS_FREE, POS_FILLED
     };
 
-    int boardFields[boardWidth][boardHeight]{};
+    int16_t boardFields[boardWidth][boardHeight]{};
 
     void InitBoard();
 
-    void DeleteLine(int pY);
+    void DeleteLine(int16_t pY);
   };
 
 }

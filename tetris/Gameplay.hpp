@@ -22,8 +22,8 @@ namespace game {
     void CreateNewPiece();
 
     // current falling piece
-    int16_t mPosX{}, mPosY{};
-    int16_t mPiece{}, mRotation{};
+    int16_t currentPosX{}, currentPosY{};
+    int16_t currentPiece{}, currentRotation{};
 
     void MoveLeft();
     void MoveRight();
@@ -37,16 +37,15 @@ namespace game {
   private:
     GameState gameState {Game};
 
-    int16_t mNextPosX{}, mNextPosY{};
-    int16_t mNextPiece{}, mNextRotation{};
+    int16_t nextPosX{}, nextPosY{};
+    int16_t nextPiece{}, nextRotation{};
 
     Board *board;
-    PieceDefinition *pieces{};
     GraphicInterface *graphicInterface;
 
     void InitGameplay();
 
-    void DrawPiece(int16_t pX, int16_t pY, int16_t pPiece, int16_t pRotation);
+    void DrawPiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
 
     void DrawBoardAndLegend();
 

@@ -11,9 +11,9 @@ namespace game {
 
   class PieceDefinition {
   public:
-    static int16_t GetBlockType(int16_t pPiece, int16_t pRotation, int16_t pX, int16_t pY);
-    static int16_t GetXInitialPosition(int16_t pPiece, int16_t pRotation);
-    static int16_t GetYInitialPosition(int16_t pPiece, int16_t pRotation);
+    static int16_t GetBlockType(int16_t piece, int16_t rotation, int16_t pX, int16_t pY);
+    static int16_t GetXInitialPosition(int16_t piece, int16_t rotation);
+    static int16_t GetYInitialPosition(int16_t piece, int16_t rotation);
 
   private:
     // Pieces definition

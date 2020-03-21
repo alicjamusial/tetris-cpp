@@ -18,60 +18,60 @@ Gameplay::Gameplay(Board *pBoard, GraphicInterface *pGraphicInterface) {
 void Gameplay::InitGameplay() {
   srand((unsigned int) time(nullptr));
 
-  // Init current falling piece
-  mPiece = GetRand(6);
-  mRotation = GetRand(3);
-  mPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(mPiece, mRotation);
-  mPosY = PieceDefinition::GetYInitialPosition(mPiece, mRotation);
+  // Init current falling currentPiece
+  currentPiece = GetRand(6);
+  currentRotation = GetRand(3);
+  currentPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
+  currentPosY = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
 
-  // Init next piece next to board
-  mNextPiece = GetRand(6);
-  mNextRotation = GetRand(3);
-  mNextPosX = boardWidth + nextPieceMargin;
-  mNextPosY = nextPieceMargin;
+  // Init next currentPiece next to board
+  nextPiece = GetRand(6);
+  nextRotation = GetRand(3);
+  nextPosX = boardWidth + nextPieceMargin;
+  nextPosY = nextPieceMargin;
 }
 
 void Gameplay::MoveRight() {
-  if (board->IsPossibleMovement(mPosX + 1, mPosY, mPiece, mRotation)) {
-    mPosX++;
+  if (board->IsPossibleMovement(currentPosX + 1, currentPosY, currentPiece, currentRotation)) {
+    currentPosX++;
   }
 }
 
 void Gameplay::MoveLeft() {
-  if (board->IsPossibleMovement(mPosX - 1, mPosY, mPiece, mRotation)) {
-    mPosX--;
+  if (board->IsPossibleMovement(currentPosX - 1, currentPosY, currentPiece, currentRotation)) {
+    currentPosX--;
   }
 }
 
 void Gameplay::MoveDown() {
-  if (board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
-    mPosY++;
+  if (board->IsPossibleMovement(currentPosX, currentPosY + 1, currentPiece, currentRotation)) {
+    currentPosY++;
   }
 }
 
 void Gameplay::MoveBottom() {
-  while (board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
-    mPosY++;
+  while (board->IsPossibleMovement(currentPosX, currentPosY + 1, currentPiece, currentRotation)) {
+    currentPosY++;
   }
   StorePiece();
 }
 
 void Gameplay::Rotate() {
-  if (board->IsPossibleMovement(mPosX, mPosY, mPiece, (mRotation + 1) % 4)) {
-    mRotation = (mRotation + 1) % 4;
+  if (board->IsPossibleMovement(currentPosX, currentPosY, currentPiece, (currentRotation + 1) % 4)) {
+    currentRotation = (currentRotation + 1) % 4;
   }
 }
 
 void Gameplay::Fall() {
-  if (gameState == Game && board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
-    mPosY++;
+  if (gameState == Game && board->IsPossibleMovement(currentPosX, currentPosY + 1, currentPiece, currentRotation)) {
+    currentPosY++;
   } else {
     StorePiece();
   }
 }
 
 void Gameplay::StorePiece() {
-  board->StorePiece(mPosX, mPosY, mPiece, mRotation);
+  board->StorePiece(currentPosX, currentPosY, currentPiece, currentRotation);
   board->DeletePossibleLines();
 
   CheckIfGameOver();
@@ -94,8 +94,8 @@ void Gameplay::DrawScene() {
   switch(gameState) {
     case Game:
       DrawBoardAndLegend();
-      DrawPiece(mPosX, mPosY, mPiece, mRotation);
-      DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
+      DrawPiece(currentPosX, currentPosY, currentPiece, currentRotation);
+      DrawPiece(nextPosX, nextPosY, nextPiece, nextRotation);
       break;
     case GameOver:
       graphicInterface->DrawGameOver();
@@ -104,18 +104,18 @@ void Gameplay::DrawScene() {
 }
 
 void Gameplay::CreateNewPiece() {
-  // Get next piece and make it current
-  mPiece = mNextPiece;
-  mRotation = mNextRotation;
-  mPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(mPiece, mRotation);
-  mPosY = PieceDefinition::GetYInitialPosition(mPiece, mRotation);
+  // Get next currentPiece and make it current
+  currentPiece = nextPiece;
+  currentRotation = nextRotation;
+  currentPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
+  currentPosY = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
 
-  // Init new next piece
-  mNextPiece = GetRand(6);
-  mNextRotation = GetRand(3);
+  // Init new next currentPiece
+  nextPiece = GetRand(6);
+  nextRotation = GetRand(3);
 }
 
-void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t pPiece, int16_t pRotation) {
+void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation) {
 
   int16_t mPixelsX = game::Board::GetXPosInPixels(pX);
   int16_t mPixelsY = game::Board::GetYPosInPixels(pY);
@@ -123,15 +123,15 @@ void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t pPiece, int16_t pRotati
   for (int16_t i = 0; i < pieceBlocks; i++) {
     for (int16_t j = 0; j < pieceBlocks; j++) {
 
-      colorEnum pieceColor = PieceDefinition::GetBlockType(pPiece, pRotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
+      colorEnum currentPieceColor = PieceDefinition::GetBlockType(piece, rotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
 
-      if (PieceDefinition::GetBlockType(pPiece, pRotation, j, i) != Blank) {
+      if (PieceDefinition::GetBlockType(piece, rotation, j, i) != Blank) {
         graphicInterface->DrawRectangle(
             mPixelsX + (i * blockSize) + boardLineWidth + blockMargin,
             mPixelsY + j * blockSize,
             blockSize - blockMargin,
             blockSize - blockMargin,
-            pieceColor);
+            currentPieceColor);
       }
     }
   }

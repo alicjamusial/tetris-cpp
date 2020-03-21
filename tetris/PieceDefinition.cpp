@@ -6,16 +6,16 @@
 
 using namespace game;
 
-int16_t PieceDefinition::GetBlockType(int16_t pPiece, int16_t pRotation, int16_t pX, int16_t pY) {
-  return PieceDefinition::mPiecesTypes[pPiece][pRotation][pX][pY];
+int16_t PieceDefinition::GetBlockType(int16_t piece, int16_t rotation, int16_t pX, int16_t pY) {
+  return PieceDefinition::mPiecesTypes[piece][rotation][pX][pY];
 }
 
-int16_t PieceDefinition::GetXInitialPosition(int16_t pPiece, int16_t pRotation) {
-  return PieceDefinition::mPiecesInitialPosition[pPiece][pRotation][0];
+int16_t PieceDefinition::GetXInitialPosition(int16_t piece, int16_t rotation) {
+  return PieceDefinition::mPiecesInitialPosition[piece][rotation][0];
 }
 
-int16_t PieceDefinition::GetYInitialPosition(int16_t pPiece, int16_t pRotation) {
-  return PieceDefinition::mPiecesInitialPosition[pPiece][pRotation][1];
+int16_t PieceDefinition::GetYInitialPosition(int16_t piece, int16_t rotation) {
+  return PieceDefinition::mPiecesInitialPosition[piece][rotation][1];
 }
 
 const char PieceDefinition::mPiecesTypes[7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ] =
