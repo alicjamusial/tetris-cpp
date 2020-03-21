@@ -45,53 +45,25 @@ Tetris::Tetris() {
           if (event.type == SDL_KEYDOWN) {
             uint16_t key = event.key.keysym.sym;
             switch (key) {
-              case (SDLK_d): {
-                if (board.IsPossibleMovement(gameplay.mPosX + 1, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
-                  gameplay.mPosX++;
-                }
+              case (SDLK_d):
+                gameplay.MoveRight();
                 break;
-              }
 
-              case (SDLK_a): {
-                if (board.IsPossibleMovement(gameplay.mPosX - 1, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
-                  gameplay.mPosX--;
-                }
+              case (SDLK_a):
+                gameplay.MoveLeft();
                 break;
-              }
 
-              case (SDLK_s): {
-                if (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY + 1, gameplay.mPiece, gameplay.mRotation)) {
-                  gameplay.mPosY++;
-                }
+              case (SDLK_s):
+                gameplay.MoveDown();
                 break;
-              }
 
-              case (SDLK_x): {
-                while (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation)) {
-                  gameplay.mPosY++;
-                }
-
-                board.StorePiece(gameplay.mPosX, gameplay.mPosY - 1, gameplay.mPiece, gameplay.mRotation);
-
-                board.DeletePossibleLines();
-
-                if (board.IsGameOver())
-                {
-                  // mIO.Getkey();
-                  // exit(0);
-                  // todo: gameover
-                }
-
-                gameplay.CreateNewPiece();
-
+              case (SDLK_x):
+                gameplay.MoveBottom();
                 break;
-              }
-              case (SDLK_z): {
-                if (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY, gameplay.mPiece, (gameplay.mRotation + 1) % 4)) {
-                  gameplay.mRotation = (gameplay.mRotation + 1) % 4;
-                }
+
+              case (SDLK_z):
+                gameplay.Rotate();
                 break;
-              }
 
               default:
                 break;

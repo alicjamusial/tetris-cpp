@@ -33,6 +33,45 @@ void Gameplay::InitGameplay() {
   mNextPosY = nextPieceMargin;
 }
 
+void Gameplay::MoveRight() {
+  if (board->IsPossibleMovement(mPosX + 1, mPosY, mPiece, mRotation)) {
+    mPosX++;
+  }
+}
+
+void Gameplay::MoveLeft() {
+  if (board->IsPossibleMovement(mPosX - 1, mPosY, mPiece, mRotation)) {
+    mPosX--;
+  }
+}
+
+void Gameplay::MoveDown() {
+  if (board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
+    mPosY++;
+  }
+}
+
+void Gameplay::MoveBottom() {
+  while (board->IsPossibleMovement(mPosX, mPosY, mPiece, mRotation)) {
+    mPosY++;
+  }
+
+  board->StorePiece(mPosX, mPosY - 1, mPiece, mRotation);
+  board->DeletePossibleLines();
+
+  if (board->IsGameOver()) {
+    gameOver = true;
+  }
+
+  CreateNewPiece();
+}
+
+void Gameplay::Rotate() {
+  if (board->IsPossibleMovement(mPosX, mPosY, mPiece, (mRotation + 1) % 4)) {
+    mRotation = (mRotation + 1) % 4;
+  }
+}
+
 void Gameplay::DrawScene() {
   DrawBoard();
   DrawPiece(mPosX, mPosY, mPiece, mRotation);

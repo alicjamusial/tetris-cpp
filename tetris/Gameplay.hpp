@@ -13,6 +13,8 @@
 namespace game {
   class Gameplay {
   public:
+    bool gameOver {false};
+
     Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface);
 
     void DrawScene();
@@ -21,6 +23,12 @@ namespace game {
     // current falling piece
     int mPosX{}, mPosY{};
     int mPiece{}, mRotation{};
+
+    void MoveLeft();
+    void MoveRight();
+    void MoveDown();
+    void MoveBottom();
+    void Rotate();
 
   private:
     int mNextPosX{}, mNextPosY{};
