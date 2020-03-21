@@ -3,6 +3,7 @@
 // Pieces definition from tutorial: http://javilop.com/gamedev/tetris-tutorial-in-c-platform-independent-focused-in-game-logic-for-beginners/
 //
 #pragma once
+#include <cstdint>
 
 namespace game {
 
@@ -10,11 +11,11 @@ namespace game {
 
   class Piece {
   public:
-    int GetBlockType(int pPiece, int pRotation, int pX, int pY);
+    int16_t GetBlockType(int16_t pPiece, int16_t pRotation, int16_t pX, int16_t pY);
 
-    int GetXInitialPosition(int pPiece, int pRotation);
+    int16_t GetXInitialPosition(int16_t pPiece, int16_t pRotation);
 
-    int GetYInitialPosition(int pPiece, int pRotation);
+    int16_t GetYInitialPosition(int16_t pPiece, int16_t pRotation);
 
   private:
 
@@ -241,7 +242,7 @@ namespace game {
         };
 
     // Displacement of the piece to the position where it is first drawn in the board when it is created
-    int mPiecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */] =
+    int16_t mPiecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */] =
         {
             /* Square */
             {

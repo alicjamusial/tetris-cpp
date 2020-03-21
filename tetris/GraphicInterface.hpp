@@ -15,7 +15,7 @@ namespace game {
 
     ~GraphicInterface();
 
-    void DrawRectangle(int pX1, int pY1, int pX2, int pY2, enum colorEnum pC);
+    void DrawRectangle(int16_t pX1, int16_t pY1, int16_t pX2, int16_t pY2, enum colorEnum pC);
 
     void ClearScreen();
 

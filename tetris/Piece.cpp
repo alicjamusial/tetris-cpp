@@ -6,14 +6,14 @@
 
 using namespace game;
 
-int Piece::GetBlockType(int pPiece, int pRotation, int pX, int pY) {
+int16_t Piece::GetBlockType(int16_t pPiece, int16_t pRotation, int16_t pX, int16_t pY) {
   return mPiecesTypes[pPiece][pRotation][pX][pY];
 }
 
-int Piece::GetXInitialPosition(int pPiece, int pRotation) {
+int16_t Piece::GetXInitialPosition(int16_t pPiece, int16_t pRotation) {
   return mPiecesInitialPosition[pPiece][pRotation][0];
 }
 
-int Piece::GetYInitialPosition(int pPiece, int pRotation) {
+int16_t Piece::GetYInitialPosition(int16_t pPiece, int16_t pRotation) {
   return mPiecesInitialPosition[pPiece][pRotation][1];
 }

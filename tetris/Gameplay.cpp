@@ -113,13 +113,13 @@ void Gameplay::CreateNewPiece() {
   mNextRotation = GetRand(3);
 }
 
-void Gameplay::DrawPiece(int pX, int pY, int pPiece, int pRotation) {
+void Gameplay::DrawPiece(int16_t pX, int16_t pY, int16_t pPiece, int16_t pRotation) {
 
-  int mPixelsX = game::Board::GetXPosInPixels(pX);
-  int mPixelsY = game::Board::GetYPosInPixels(pY);
+  int16_t mPixelsX = game::Board::GetXPosInPixels(pX);
+  int16_t mPixelsY = game::Board::GetYPosInPixels(pY);
 
-  for (int i = 0; i < pieceBlocks; i++) {
-    for (int j = 0; j < pieceBlocks; j++) {
+  for (int16_t i = 0; i < pieceBlocks; i++) {
+    for (int16_t j = 0; j < pieceBlocks; j++) {
 
       colorEnum pieceColor = pieces->GetBlockType(pPiece, pRotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
 
@@ -141,8 +141,8 @@ void Gameplay::DrawBoardAndLegend() {
   graphicInterface->DrawRectangle(boardLineX1, boardLineY1, boardLineWidth, boardHeight * blockSize, ColorPrimary);
   graphicInterface->DrawRectangle(boardLineX2, boardLineY2, boardLineWidth, boardHeight * blockSize, ColorPrimary);
 
-  for (int i = 0; i < boardWidth; i++) {
-    for (int j = 0; j < boardHeight; j++) {
+  for (int16_t i = 0; i < boardWidth; i++) {
+    for (int16_t j = 0; j < boardHeight; j++) {
       if (!board->IsFreeBlock(i, j)) {
         graphicInterface->DrawRectangle(
             boardLineX1 + (i * blockSize) + boardLineWidth + blockMargin,
@@ -155,6 +155,6 @@ void Gameplay::DrawBoardAndLegend() {
   }
 }
 
-int Gameplay::GetRand(int max) {
+int16_t Gameplay::GetRand(int16_t max) {
   return rand() % max + 1;
 }

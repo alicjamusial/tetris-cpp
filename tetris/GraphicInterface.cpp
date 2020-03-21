@@ -37,7 +37,7 @@ void GraphicInterface::ClearScreen() {
 }
 
 
-void GraphicInterface::DrawRectangle(int x, int y, int w, int h, enum colorEnum color) {
+void GraphicInterface::DrawRectangle(int16_t x, int16_t y, int16_t w, int16_t h, enum colorEnum color) {
   SDL_Rect fillRect = {x, y, w, h};
   SDL_SetRenderDrawColor(
       renderer,
