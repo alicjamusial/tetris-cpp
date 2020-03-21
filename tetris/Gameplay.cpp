@@ -8,8 +8,7 @@
 
 using namespace game;
 
-Gameplay::Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface)
-{
+Gameplay::Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface) {
   board = pBoard;
   pieces = pPieces;
   graphicInterface = pGraphicInterface;
@@ -94,7 +93,7 @@ void Gameplay::RestartGame() {
 
 void Gameplay::DrawScene() {
   if (!gameOver) {
-    DrawBoard();
+    DrawBoardAndLegend();
     DrawPiece(mPosX, mPosY, mPiece, mRotation);
     DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
   } else {
@@ -136,8 +135,9 @@ void Gameplay::DrawPiece(int pX, int pY, int pPiece, int pRotation) {
   }
 }
 
-void Gameplay::DrawBoard() {
+void Gameplay::DrawBoardAndLegend() {
 
+  graphicInterface->DrawLegend();
   graphicInterface->DrawRectangle(boardLineX1, boardLineY1, boardLineWidth, boardHeight * blockSize, ColorPrimary);
   graphicInterface->DrawRectangle(boardLineX2, boardLineY2, boardLineWidth, boardHeight * blockSize, ColorPrimary);
 

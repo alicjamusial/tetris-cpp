@@ -45,7 +45,7 @@ namespace game {
 
     void DrawPiece(int pX, int pY, int pPiece, int pRotation);
 
-    void DrawBoard();
+    void DrawBoardAndLegend();
 
     void CheckIfGameOver();
 

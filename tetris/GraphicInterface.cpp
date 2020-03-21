@@ -10,16 +10,17 @@ using namespace game;
 
 GraphicInterface::GraphicInterface(SDL_Window *window) {
   renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED );
-
-  image = SDL_LoadBMP("assets/game_over.bmp");
-  const char* aa[35] {SDL_GetError()};
-  texture = SDL_CreateTextureFromSurface(renderer, image);
-  SDL_RenderCopy(renderer, texture, NULL, &imgPosition);
+  gameOverImage = SDL_LoadBMP("assets/game_over.bmp");
+  gameOverTexture = SDL_CreateTextureFromSurface(renderer, gameOverImage);
+  legendImage = SDL_LoadBMP("assets/legend.bmp");
+  legendTexture = SDL_CreateTextureFromSurface(renderer, legendImage);
 }
 
 GraphicInterface::~GraphicInterface() {
-  SDL_DestroyTexture(texture);
-  SDL_FreeSurface(image);
+  SDL_DestroyTexture(gameOverTexture);
+  SDL_FreeSurface(gameOverImage);
+  SDL_DestroyTexture(legendTexture);
+  SDL_FreeSurface(legendImage);
   SDL_DestroyRenderer(renderer);
 }
 
@@ -49,7 +50,11 @@ void GraphicInterface::DrawRectangle(int x, int y, int w, int h, enum colorEnum 
 }
 
 void GraphicInterface::DrawGameOver() {
-  SDL_RenderCopy(renderer, texture, NULL, &imgPosition);
+  SDL_RenderCopy(renderer, gameOverTexture, nullptr, &gameOverImgPosition);
+}
+
+void GraphicInterface::DrawLegend() {
+  SDL_RenderCopy(renderer, legendTexture, nullptr, &legendImgPosition);
 }
 
 void GraphicInterface::UpdateScreen() {

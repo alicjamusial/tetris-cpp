@@ -10,8 +10,12 @@ namespace game {
   uint16_t const screenWidth {640};
   uint16_t const screenHeight {480};
 
-  uint16_t const imgWidth {400};
-  uint16_t const imgHeight {200};
+  uint16_t const gameOverImgWidth {400};
+  uint16_t const gameOverImgHeight {200};
+
+  uint16_t const legendImgWidth {400};
+  uint16_t const legendImgHeight {120};
+  uint16_t const legendMargin {10};
 
   uint16_t const timeInterval {200};
 
@@ -19,8 +23,9 @@ namespace game {
   uint16_t const blockSize {16};
   uint16_t const blockMargin {2};
   uint16_t const nextPieceMargin {5};
-  uint16_t const boardWidth {10};
-  uint16_t const boardHeight {20};
+  uint16_t const boardWidth {12};
+  uint16_t const boardHeight {18};
+
   uint16_t const pieceBlocks {5};
 
   uint16_t const halfBoardWidth {boardWidth / 2};

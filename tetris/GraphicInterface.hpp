@@ -22,11 +22,17 @@ namespace game {
     void UpdateScreen();
 
     void DrawGameOver();
+    void DrawLegend();
 
   private:
     SDL_Renderer* renderer {nullptr};
-    SDL_Surface* image {nullptr};
-    SDL_Texture* texture {nullptr};
-    SDL_Rect imgPosition = {screenWidth/2 - imgWidth/2, screenHeight/2 - imgHeight/2, imgWidth, imgHeight};
+    SDL_Surface* gameOverImage {nullptr};
+    SDL_Texture* gameOverTexture {nullptr};
+    SDL_Surface* legendImage {nullptr};
+    SDL_Texture* legendTexture {nullptr};
+    SDL_Rect gameOverImgPosition = {screenWidth/2 - gameOverImgWidth/2, screenHeight/2 - gameOverImgHeight/2,
+                                    gameOverImgWidth, gameOverImgHeight};
+    SDL_Rect legendImgPosition = {screenWidth/2 - legendImgWidth/2, legendMargin,
+                                  legendImgWidth, legendImgHeight};
   };
 }
