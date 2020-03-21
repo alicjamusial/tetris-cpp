@@ -11,10 +11,11 @@
 #include "Piece.hpp"
 
 namespace game {
+
+  enum GameState {Game, GameOver};
+
   class Gameplay {
   public:
-    bool gameOver {false};
-
     Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInterface);
 
     void DrawScene();
@@ -34,6 +35,8 @@ namespace game {
     void RestartGame();
 
   private:
+    GameState gameState {Game};
+
     int16_t mNextPosX{}, mNextPosY{};
     int16_t mNextPiece{}, mNextRotation{};
 
