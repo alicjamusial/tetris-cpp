@@ -17,20 +17,20 @@ Gameplay::Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInte
   InitGameplay();
 }
 
-int Gameplay::GetRand(int pA, int pB) {
-  return rand() % (pB - pA + 1) + pA;
+int Gameplay::GetRand(int max) {
+  return rand() % max + 1;
 }
 
 void Gameplay::InitGameplay() {
   srand((unsigned int) time(nullptr));
 
-  mPiece = GetRand(0, 6);
-  mRotation = GetRand(0, 3);
-  mPosX = (boardWidth / 2) + pieces->GetXInitialPosition(mPiece, mRotation);
+  mPiece = GetRand(6);
+  mRotation = GetRand(3);
+  mPosX = halfBoardWidth + pieces->GetXInitialPosition(mPiece, mRotation);
   mPosY = pieces->GetYInitialPosition(mPiece, mRotation);
 
-  mNextPiece = GetRand(0, 6);
-  mNextRotation = GetRand(0, 3);
+  mNextPiece = GetRand(6);
+  mNextRotation = GetRand(3);
   mNextPosX = boardWidth + 5;
   mNextPosY = 5;
 }
@@ -38,34 +38,30 @@ void Gameplay::InitGameplay() {
 void Gameplay::CreateNewPiece() {
   mPiece = mNextPiece;
   mRotation = mNextRotation;
-  mPosX = (boardWidth / 2) + pieces->GetXInitialPosition(mPiece, mRotation);
+  mPosX = halfBoardWidth + pieces->GetXInitialPosition(mPiece, mRotation);
   mPosY = pieces->GetYInitialPosition(mPiece, mRotation);
 
-  mNextPiece = GetRand(0, 6);
-  mNextRotation = GetRand(0, 3);
+  mNextPiece = GetRand(6);
+  mNextRotation = GetRand(3);
 }
 
 void Gameplay::DrawPiece (int pX, int pY, int pPiece, int pRotation) {
-  colorEnum mColor;
 
   int mPixelsX = board->GetXPosInPixels(pX);
   int mPixelsY = board->GetYPosInPixels(pY);
 
   for (int i = 0; i < pieceBlocks; i++) {
     for (int j = 0; j < pieceBlocks; j++) {
-      switch (pieces->GetBlockType(pPiece, pRotation, j, i))
-      {
-        case 1: mColor = ColorPrimary; break;
-        case 2: mColor = ColorThird; break;
-      }
 
-      if (pieces->GetBlockType (pPiece, pRotation, j, i) != 0) {
+      colorEnum pieceColor = pieces->GetBlockType(pPiece, pRotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
+
+      if (pieces->GetBlockType(pPiece, pRotation, j, i) != Blank) {
         mGraphicInterface->DrawRectangle(
             mPixelsX + (i * blockSize) + boardLineWidth + blockMargin,
             mPixelsY + j * blockSize,
             blockSize - blockMargin,
             blockSize - blockMargin,
-            mColor);
+            pieceColor);
       }
     }
   }

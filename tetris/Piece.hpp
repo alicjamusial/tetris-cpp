@@ -1,9 +1,13 @@
 //
 // Created by Alicja on 2020-03-02.
+// Pieces definition from tutorial: http://javilop.com/gamedev/tetris-tutorial-in-c-platform-independent-focused-in-game-logic-for-beginners/
 //
 #pragma once
 
 namespace game {
+
+  enum pieceTypes {Blank, NormalPiece, RotationPiece};
+
   class Piece {
   public:
     int GetBlockType(int pPiece, int pRotation, int pX, int pY);

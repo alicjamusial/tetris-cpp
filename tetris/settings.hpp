@@ -19,11 +19,14 @@ namespace game {
   uint16_t const boardHeight {20};
   uint16_t const pieceBlocks {5};
 
-  uint16_t const boardLineX1 = screenWidth / 2 - (boardWidth / 2 * blockSize) - boardLineWidth / 2 - (blockMargin / 2);
-  uint16_t const boardLineY1 = screenHeight - (boardHeight * blockSize);
+  uint16_t const halfBoardWidth {boardWidth / 2};
+  uint16_t const halfBlockMargin {blockMargin / 2};
 
-  uint16_t const boardLineX2 = screenWidth / 2 + (boardWidth / 2 * blockSize) + boardLineWidth / 2 + (blockMargin / 2);
-  uint16_t const boardLineY2 = screenHeight - (boardHeight * blockSize);
+  uint16_t const boardLineX1 {screenWidth / 2 - (halfBoardWidth * blockSize) - boardLineWidth / 2 - halfBlockMargin};
+  uint16_t const boardLineY1 {screenHeight - (boardHeight * blockSize)};
+
+  uint16_t const boardLineX2 {screenWidth / 2 + (halfBoardWidth * blockSize) + boardLineWidth / 2 + halfBlockMargin};
+  uint16_t const boardLineY2 {screenHeight - (boardHeight * blockSize)};
 
   enum colorEnum {ColorBoard, ColorPrimary, ColorThird};
 

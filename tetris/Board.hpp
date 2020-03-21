@@ -9,13 +9,12 @@
 namespace game {
   class Board {
   public:
-    Board();
 
     Board(Piece *pPieces);
 
-    int GetXPosInPixels(int pPos);
+    static int GetXPosInPixels(int pPos);
 
-    int GetYPosInPixels(int pPos);
+    static int GetYPosInPixels(int pPos);
 
     bool IsFreeBlock(int pX, int pY);
 
@@ -31,9 +30,9 @@ namespace game {
     enum {
       POS_FREE, POS_FILLED
     };
-    Piece *mPieces;
-    int mScreenHeight;
-    int mBoard[boardWidth][boardHeight];
+
+    Piece *boardPieces;
+    int boardFields[boardWidth][boardHeight]{};
 
     void InitBoard();
 
