@@ -87,9 +87,13 @@ void Gameplay::CheckIfGameOver() {
 }
 
 void Gameplay::DrawScene() {
-  DrawBoard();
-  DrawPiece(mPosX, mPosY, mPiece, mRotation);
-  DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
+  if (gameOver) {
+    DrawBoard();
+    DrawPiece(mPosX, mPosY, mPiece, mRotation);
+    DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);
+  } else {
+    graphicInterface->DrawGameOver();
+  }
 }
 
 void Gameplay::CreateNewPiece() {

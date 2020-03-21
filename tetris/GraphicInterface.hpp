@@ -21,7 +21,12 @@ namespace game {
 
     void UpdateScreen();
 
+    void DrawGameOver();
+
   private:
     SDL_Renderer* renderer {nullptr};
+    SDL_Surface* image {nullptr};
+    SDL_Texture* texture {nullptr};
+    SDL_Rect imgPosition = {screenWidth/2 - imgWidth/2, screenHeight/2 - imgHeight/2, imgWidth, imgHeight};
   };
 }

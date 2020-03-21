@@ -47,8 +47,8 @@ namespace game {
 
     void CheckIfGameOver();
 
-    static int GetRand(int max);
-
     void StorePiece();
+
+    static int GetRand(int max);
   };
 }

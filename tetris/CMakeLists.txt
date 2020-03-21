@@ -1,5 +1,7 @@
 set(NAME tetris)
 
+add_subdirectory(assets)
+
 add_executable(${NAME}
         main.cpp
         settings.hpp

@@ -10,9 +10,16 @@ using namespace game;
 
 GraphicInterface::GraphicInterface(SDL_Window *window) {
   renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED );
+
+  image = SDL_LoadBMP("assets/game_over.bmp");
+  const char* aa[35] {SDL_GetError()};
+  texture = SDL_CreateTextureFromSurface(renderer, image);
+  SDL_RenderCopy(renderer, texture, NULL, &imgPosition);
 }
 
 GraphicInterface::~GraphicInterface() {
+  SDL_DestroyTexture(texture);
+  SDL_FreeSurface(image);
   SDL_DestroyRenderer(renderer);
 }
 
@@ -39,6 +46,10 @@ void GraphicInterface::DrawRectangle(int x, int y, int w, int h, enum colorEnum 
       colorsMap[color][3]
   );
   SDL_RenderFillRect(renderer, &fillRect);
+}
+
+void GraphicInterface::DrawGameOver() {
+  SDL_RenderCopy(renderer, texture, NULL, &imgPosition);
 }
 
 void GraphicInterface::UpdateScreen() {
