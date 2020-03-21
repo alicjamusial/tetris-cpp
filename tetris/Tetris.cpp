@@ -77,22 +77,7 @@ Tetris::Tetris() {
         time2 = SDL_GetTicks();
 
         if ((time2 - time1) > timeInterval) {
-          if (board.IsPossibleMovement(gameplay.mPosX, gameplay.mPosY + 1, gameplay.mPiece, gameplay.mRotation)) {
-            gameplay.mPosY++;
-          } else {
-            board.StorePiece(gameplay.mPosX, gameplay.mPosY, gameplay.mPiece, gameplay.mRotation);
-
-            board.DeletePossibleLines();
-
-            if (board.IsGameOver())
-            {
-//              mIO.Getkey();
-//              exit(0);
-            }
-
-            gameplay.CreateNewPiece();
-          }
-
+          gameplay.Fall();
           time1 = SDL_GetTicks();
         }
 

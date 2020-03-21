@@ -29,6 +29,7 @@ namespace game {
     void MoveDown();
     void MoveBottom();
     void Rotate();
+    void Fall();
 
   private:
     int mNextPosX{}, mNextPosY{};
@@ -36,7 +37,7 @@ namespace game {
 
     Board *board;
     Piece *pieces;
-    GraphicInterface *mGraphicInterface;
+    GraphicInterface *graphicInterface;
 
     void InitGameplay();
 
@@ -44,6 +45,10 @@ namespace game {
 
     void DrawBoard();
 
+    void CheckIfGameOver();
+
     static int GetRand(int max);
+
+    void StorePiece();
   };
 }

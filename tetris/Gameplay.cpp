@@ -12,7 +12,7 @@ Gameplay::Gameplay(Board *pBoard, Piece *pPieces, GraphicInterface *pGraphicInte
 {
   board = pBoard;
   pieces = pPieces;
-  mGraphicInterface = pGraphicInterface;
+  graphicInterface = pGraphicInterface;
 
   InitGameplay();
 }
@@ -52,23 +52,37 @@ void Gameplay::MoveDown() {
 }
 
 void Gameplay::MoveBottom() {
-  while (board->IsPossibleMovement(mPosX, mPosY, mPiece, mRotation)) {
+  while (board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
     mPosY++;
   }
-
-  board->StorePiece(mPosX, mPosY - 1, mPiece, mRotation);
-  board->DeletePossibleLines();
-
-  if (board->IsGameOver()) {
-    gameOver = true;
-  }
-
-  CreateNewPiece();
+  StorePiece();
 }
 
 void Gameplay::Rotate() {
   if (board->IsPossibleMovement(mPosX, mPosY, mPiece, (mRotation + 1) % 4)) {
     mRotation = (mRotation + 1) % 4;
+  }
+}
+
+void Gameplay::Fall() {
+  if (board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
+    mPosY++;
+  } else {
+    StorePiece();
+  }
+}
+
+void Gameplay::StorePiece() {
+  board->StorePiece(mPosX, mPosY, mPiece, mRotation);
+  board->DeletePossibleLines();
+
+  CheckIfGameOver();
+  CreateNewPiece();
+}
+
+void Gameplay::CheckIfGameOver() {
+  if (board->IsGameOver()) {
+    gameOver = true;
   }
 }
 
@@ -101,7 +115,7 @@ void Gameplay::DrawPiece(int pX, int pY, int pPiece, int pRotation) {
       colorEnum pieceColor = pieces->GetBlockType(pPiece, pRotation, j, i) == RotationPiece ? ColorThird : ColorPrimary;
 
       if (pieces->GetBlockType(pPiece, pRotation, j, i) != Blank) {
-        mGraphicInterface->DrawRectangle(
+        graphicInterface->DrawRectangle(
             mPixelsX + (i * blockSize) + boardLineWidth + blockMargin,
             mPixelsY + j * blockSize,
             blockSize - blockMargin,
@@ -114,13 +128,13 @@ void Gameplay::DrawPiece(int pX, int pY, int pPiece, int pRotation) {
 
 void Gameplay::DrawBoard() {
 
-  mGraphicInterface->DrawRectangle(boardLineX1, boardLineY1, boardLineWidth, boardHeight * blockSize, ColorPrimary);
-  mGraphicInterface->DrawRectangle(boardLineX2, boardLineY2, boardLineWidth, boardHeight * blockSize, ColorPrimary);
+  graphicInterface->DrawRectangle(boardLineX1, boardLineY1, boardLineWidth, boardHeight * blockSize, ColorPrimary);
+  graphicInterface->DrawRectangle(boardLineX2, boardLineY2, boardLineWidth, boardHeight * blockSize, ColorPrimary);
 
   for (int i = 0; i < boardWidth; i++) {
     for (int j = 0; j < boardHeight; j++) {
       if (!board->IsFreeBlock(i, j)) {
-        mGraphicInterface->DrawRectangle(
+        graphicInterface->DrawRectangle(
             boardLineX1 + (i * blockSize) + boardLineWidth + blockMargin,
             boardLineY1 + (j * blockSize),
             blockSize - blockMargin,
