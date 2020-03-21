@@ -25,6 +25,8 @@ namespace game {
 
     bool IsGameOver();
 
+    void Restart();
+
   private:
     enum {
       POS_FREE, POS_FILLED

@@ -65,6 +65,10 @@ Tetris::Tetris() {
                 gameplay.Rotate();
                 break;
 
+              case (SDLK_r):
+                gameplay.RestartGame();
+                break;
+
               default:
                 break;
             }

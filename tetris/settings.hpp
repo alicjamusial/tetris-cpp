@@ -13,7 +13,7 @@ namespace game {
   uint16_t const imgWidth {400};
   uint16_t const imgHeight {200};
 
-  uint16_t const timeInterval {300};
+  uint16_t const timeInterval {200};
 
   uint16_t const boardLineWidth {6};
   uint16_t const blockSize {16};

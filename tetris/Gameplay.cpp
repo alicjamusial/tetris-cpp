@@ -65,7 +65,7 @@ void Gameplay::Rotate() {
 }
 
 void Gameplay::Fall() {
-  if (board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
+  if (!gameOver && board->IsPossibleMovement(mPosX, mPosY + 1, mPiece, mRotation)) {
     mPosY++;
   } else {
     StorePiece();
@@ -86,8 +86,14 @@ void Gameplay::CheckIfGameOver() {
   }
 }
 
+void Gameplay::RestartGame() {
+  gameOver = false;
+  board->Restart();
+  CreateNewPiece();
+}
+
 void Gameplay::DrawScene() {
-  if (gameOver) {
+  if (!gameOver) {
     DrawBoard();
     DrawPiece(mPosX, mPosY, mPiece, mRotation);
     DrawPiece(mNextPosX, mNextPosY, mNextPiece, mNextRotation);

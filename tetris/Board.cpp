@@ -12,6 +12,10 @@ Board::Board(Piece *pPieces) {
   InitBoard();
 }
 
+void Board::Restart() {
+  InitBoard();
+}
+
 
 void Board::InitBoard() {
   for (auto &i : boardFields) {

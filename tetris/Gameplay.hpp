@@ -31,6 +31,8 @@ namespace game {
     void Rotate();
     void Fall();
 
+    void RestartGame();
+
   private:
     int mNextPosX{}, mNextPosY{};
     int mNextPiece{}, mNextRotation{};
