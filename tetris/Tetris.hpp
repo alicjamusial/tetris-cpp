@@ -18,12 +18,9 @@ namespace game {
     static void showError(const std::string& errorMsg);
 
   private:
-    std::string windowTitle {"Tetris"};
+    std::string _windowTitle {"Tetris"};
 
-    bool running {true};
-    SDL_Window* window {nullptr};
-
-    float time1;
-    float time2;
+    bool _running {true};
+    SDL_Window* _window {nullptr};
   };
 }

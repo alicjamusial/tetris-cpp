@@ -28,11 +28,11 @@ namespace game {
     void Restart();
 
   private:
-    enum {
-      POS_FREE, POS_FILLED
+    enum class PositionStatus {
+      PositionFree, PositionFilled
     };
 
-    int16_t boardFields[boardWidth][boardHeight]{};
+    PositionStatus _boardFields[boardWidth][boardHeight]{};
 
     void InitBoard();
 

@@ -25,15 +25,15 @@ namespace game {
     void DrawLegend();
 
   private:
-    SDL_Renderer* renderer {nullptr};
-    SDL_Surface* gameOverImage {nullptr};
-    SDL_Texture* gameOverTexture {nullptr};
-    SDL_Surface* legendImage {nullptr};
-    SDL_Texture* legendTexture {nullptr};
-    SDL_Rect gameOverImgPosition = {screenWidth/2 - gameOverImgWidth/2, screenHeight/2 - gameOverImgHeight/2,
-                                    gameOverImgWidth, gameOverImgHeight};
-    SDL_Rect legendImgPosition = {screenWidth/2 - legendImgWidth/2, legendMargin,
-                                  legendImgWidth, legendImgHeight};
+    SDL_Renderer* _renderer {nullptr};
+    SDL_Surface* _gameOverImage {nullptr};
+    SDL_Texture* _gameOverTexture {nullptr};
+    SDL_Surface* _legendImage {nullptr};
+    SDL_Texture* _legendTexture {nullptr};
+    SDL_Rect const _gameOverImgPosition = {screenWidth / 2 - gameOverImgWidth / 2, screenHeight / 2 - gameOverImgHeight / 2,
+                                     gameOverImgWidth, gameOverImgHeight};
+    SDL_Rect const _legendImgPosition = {screenWidth / 2 - legendImgWidth / 2, legendMargin,
+                                         legendImgWidth, legendImgHeight};
 
     void InitImages();
   };

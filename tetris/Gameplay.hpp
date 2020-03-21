@@ -35,13 +35,13 @@ namespace game {
     void RestartGame();
 
   private:
-    GameState gameState {Game};
+    GameState _gameState {Game};
 
-    int16_t nextPosX{}, nextPosY{};
-    int16_t nextPiece{}, nextRotation{};
+    int16_t _nextPosX{}, _nextPosY{};
+    int16_t _nextPiece{}, _nextRotation{};
 
-    Board *board;
-    GraphicInterface *graphicInterface;
+    Board* _board;
+    GraphicInterface* _graphicInterface;
 
     void InitGameplay();
 

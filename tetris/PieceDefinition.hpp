@@ -17,9 +17,9 @@ namespace game {
 
   private:
     // Pieces definition
-    const static char mPiecesTypes[7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ];
+    const static char _piecesTypes[7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ];
 
     // Displacement of the piece to the position where it is first drawn in the board when it is created
-    const static int16_t mPiecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */];
+    const static int16_t _piecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */];
   };
 }

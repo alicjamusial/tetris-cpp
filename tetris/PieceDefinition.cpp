@@ -7,18 +7,18 @@
 using namespace game;
 
 int16_t PieceDefinition::GetBlockType(int16_t piece, int16_t rotation, int16_t pX, int16_t pY) {
-  return PieceDefinition::mPiecesTypes[piece][rotation][pX][pY];
+  return PieceDefinition::_piecesTypes[piece][rotation][pX][pY];
 }
 
 int16_t PieceDefinition::GetXInitialPosition(int16_t piece, int16_t rotation) {
-  return PieceDefinition::mPiecesInitialPosition[piece][rotation][0];
+  return PieceDefinition::_piecesInitialPosition[piece][rotation][0];
 }
 
 int16_t PieceDefinition::GetYInitialPosition(int16_t piece, int16_t rotation) {
-  return PieceDefinition::mPiecesInitialPosition[piece][rotation][1];
+  return PieceDefinition::_piecesInitialPosition[piece][rotation][1];
 }
 
-const char PieceDefinition::mPiecesTypes[7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ] =
+const char PieceDefinition::_piecesTypes[7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ] =
     {
         // Square
         {
@@ -240,7 +240,7 @@ const char PieceDefinition::mPiecesTypes[7 /*kind */ ][4 /* rotation */ ][5 /* h
     };
 
 // Displacement of the piece to the position where it is first drawn in the board when it is created
-const int16_t PieceDefinition::mPiecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */] =
+const int16_t PieceDefinition::_piecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */] =
     {
         /* Square */
         {

@@ -15,24 +15,25 @@ Tetris::Tetris() {
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     showError("SDL could not initialize!");
   } else {
-    window = SDL_CreateWindow(
-        windowTitle.c_str(),
+    _window = SDL_CreateWindow(
+        _windowTitle.c_str(),
         SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED,
         screenWidth, screenHeight,
         SDL_WINDOW_SHOWN);
 
-    if (window == nullptr) {
+    if (_window == nullptr) {
       showError("Window could not be created!");
     } else {
 
-      GraphicInterface graphicInterface {window};
+      GraphicInterface graphicInterface {_window};
       Board board;
       Gameplay gameplay(&board, &graphicInterface);
 
-      time1 = SDL_GetTicks();
+      float time1 = SDL_GetTicks();
+      float time2;
 
-      while (running) {
+      while (_running) {
 
         graphicInterface.ClearScreen();
         gameplay.DrawScene();
@@ -73,7 +74,7 @@ Tetris::Tetris() {
             }
           }
           if (event.type == SDL_QUIT) {
-            running = false;
+            _running = false;
           }
         }
 
@@ -85,7 +86,7 @@ Tetris::Tetris() {
         }
 
       }
-      SDL_DestroyWindow(window);
+      SDL_DestroyWindow(_window);
       SDL_Quit();
     }
   }
