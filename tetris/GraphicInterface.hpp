@@ -34,5 +34,7 @@ namespace game {
                                     gameOverImgWidth, gameOverImgHeight};
     SDL_Rect legendImgPosition = {screenWidth/2 - legendImgWidth/2, legendMargin,
                                   legendImgWidth, legendImgHeight};
+
+    void InitImages();
   };
 }

@@ -9,11 +9,8 @@
 using namespace game;
 
 GraphicInterface::GraphicInterface(SDL_Window *window) {
-  renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED );
-  gameOverImage = SDL_LoadBMP("assets/game_over.bmp");
-  gameOverTexture = SDL_CreateTextureFromSurface(renderer, gameOverImage);
-  legendImage = SDL_LoadBMP("assets/legend.bmp");
-  legendTexture = SDL_CreateTextureFromSurface(renderer, legendImage);
+  renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+  InitImages();
 }
 
 GraphicInterface::~GraphicInterface() {
@@ -22,6 +19,13 @@ GraphicInterface::~GraphicInterface() {
   SDL_DestroyTexture(legendTexture);
   SDL_FreeSurface(legendImage);
   SDL_DestroyRenderer(renderer);
+}
+
+void GraphicInterface::InitImages() {
+  gameOverImage = SDL_LoadBMP("assets/game_over.bmp");
+  gameOverTexture = SDL_CreateTextureFromSurface(renderer, gameOverImage);
+  legendImage = SDL_LoadBMP("assets/legend.bmp");
+  legendTexture = SDL_CreateTextureFromSurface(renderer, legendImage);
 }
 
 void GraphicInterface::ClearScreen() {
