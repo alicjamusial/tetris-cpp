@@ -58,20 +58,16 @@ void Board::DeleteLine(int16_t pY)
 
 void Board::DeletePossibleLines()
 {
-    for(int16_t j = 0; j < boardHeight; j++)
+    for(int16_t i = 0; i < boardHeight; i++)
     {
-        int16_t i = 0;
-        while(i < boardWidth)
-        {
-            if(_boardFields[i][j] != PositionStatus::PositionFilled)
-            {
+        for(int16_t j = 0; j < boardWidth; j++) {
+            if(_boardFields[j][i] != PositionStatus::PositionFilled) {
                 break;
             }
-            i++;
-        }
-        if(i == boardWidth)
-        {
-            DeleteLine(j);
+            if(j == boardWidth - 1)
+            {
+                DeleteLine(i);
+            }
         }
     }
 }

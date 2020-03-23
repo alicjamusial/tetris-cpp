@@ -10,9 +10,10 @@ namespace game
     class Tetris
     {
     public:
-        Tetris();
+        ~Tetris();
 
-        static void showError(const std::string& errorMsg);
+        void GameInit();
+        void GameRun();
 
     private:
         std::string _windowTitle{"Tetris"};
