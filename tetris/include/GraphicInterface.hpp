@@ -6,6 +6,8 @@
 
 #include "SDL.h"
 #include "settings.hpp"
+#include <cstdint>
+#include <map>
 #include <vector>
 
 namespace game

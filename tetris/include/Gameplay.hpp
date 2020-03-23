@@ -5,10 +5,6 @@
 #pragma once
 #include "Board.hpp"
 #include "GraphicInterface.hpp"
-#include "PieceDefinition.hpp"
-#include <cstdint>
-#include <ctime>
-#include <string>
 
 namespace game
 {

@@ -6,6 +6,9 @@
 #include <string>
 
 #include "Tetris.hpp"
+#include "Board.hpp"
+#include "Gameplay.hpp"
+#include "GraphicInterface.hpp"
 #include "settings.hpp"
 
 using namespace game;

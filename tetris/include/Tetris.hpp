@@ -3,11 +3,6 @@
 //
 #pragma once
 #include "SDL.h"
-#include "Board.hpp"
-#include "Gameplay.hpp"
-#include "GraphicInterface.hpp"
-#include "PieceDefinition.hpp"
-#include <cstdint>
 #include <string>
 
 namespace game

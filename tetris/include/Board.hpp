@@ -2,9 +2,8 @@
 // Created by Alicja on 2020-03-04.
 //
 #pragma once
-
-#include "PieceDefinition.hpp"
 #include "settings.hpp"
+#include <cstdint>
 
 namespace game
 {

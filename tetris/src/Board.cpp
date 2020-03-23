@@ -3,6 +3,7 @@
 //
 
 #include "Board.hpp"
+#include "PieceDefinition.hpp"
 #include "settings.hpp"
 
 using namespace game;
