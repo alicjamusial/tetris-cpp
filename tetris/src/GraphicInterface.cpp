@@ -15,8 +15,6 @@ GraphicInterface::GraphicInterface(SDL_Window* window)
     _colorsMap = {{ColorEnum::ColorBoard, {0x8c, 0x8a, 0x93, 0xFF}},
                   {ColorEnum::ColorPrimary, {0xd1, 0xf0, 0xb1, 0xFF}},
                   {ColorEnum::ColorThird, {0xb6, 0xcb, 0x9e, 0xFF}}};
-
-    InitImages();
 }
 
 GraphicInterface::~GraphicInterface()

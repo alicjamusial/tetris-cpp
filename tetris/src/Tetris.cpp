@@ -30,9 +30,13 @@ Tetris::Tetris()
         }
         else
         {
-            GraphicInterface graphicInterface{_window};
             Board board;
+            GraphicInterface graphicInterface{_window};
             Gameplay gameplay(&board, &graphicInterface);
+
+            board.CreateBoard();
+            graphicInterface.InitImages();
+            gameplay.InitGameplay();
 
             float time1 = SDL_GetTicks();
             float time2;

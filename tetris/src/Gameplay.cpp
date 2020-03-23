@@ -14,8 +14,6 @@ Gameplay::Gameplay(Board* pBoard, GraphicInterface* pGraphicInterface)
 {
     _board = pBoard;
     _graphicInterface = pGraphicInterface;
-
-    InitGameplay();
 }
 
 void Gameplay::InitGameplay()
@@ -109,7 +107,7 @@ void Gameplay::CheckIfGameOver()
 void Gameplay::RestartGame()
 {
     _gameState = Game;
-    _board->Restart();
+    _board->CreateBoard();
     CreateNewPiece();
 }
 

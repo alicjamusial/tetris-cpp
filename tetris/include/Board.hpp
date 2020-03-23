@@ -10,8 +10,6 @@ namespace game
     class Board
     {
     public:
-        Board();
-
         static int16_t GetXPosInPixels(int16_t pPos);
 
         static int16_t GetYPosInPixels(int16_t pPos);
@@ -26,7 +24,7 @@ namespace game
 
         bool IsGameOver();
 
-        void Restart();
+        void CreateBoard();
 
     private:
         enum class PositionStatus
@@ -36,8 +34,6 @@ namespace game
         };
 
         PositionStatus _boardFields[boardWidth][boardHeight]{};
-
-        void InitBoard();
 
         void DeleteLine(int16_t pY);
     };

@@ -19,6 +19,7 @@ namespace game
     public:
         Gameplay(Board* pBoard, GraphicInterface* pGraphicInterface);
 
+        void InitGameplay();
         void DrawScene();
         void CreateNewPiece();
 
@@ -43,8 +44,6 @@ namespace game
 
         Board* _board;
         GraphicInterface* _graphicInterface;
-
-        void InitGameplay();
 
         void DrawPiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
 

@@ -8,17 +8,7 @@
 
 using namespace game;
 
-Board::Board()
-{
-    InitBoard();
-}
-
-void Board::Restart()
-{
-    InitBoard();
-}
-
-void Board::InitBoard()
+void Board::CreateBoard()
 {
     for(auto& i: _boardFields)
     {

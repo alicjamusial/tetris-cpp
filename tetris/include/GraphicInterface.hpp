@@ -19,6 +19,8 @@ namespace game
 
         ~GraphicInterface();
 
+        void InitImages();
+
         void DrawRectangle(int16_t pX1, int16_t pY1, int16_t pX2, int16_t pY2, ColorEnum pC);
 
         void ClearScreen();
@@ -44,7 +46,5 @@ namespace game
                                              legendImgHeight};
 
         std::map<ColorEnum, std::vector<uint32_t>> _colorsMap;
-
-        void InitImages();
     };
 }
