@@ -3,8 +3,8 @@
 //
 
 #include "GraphicInterface.hpp"
-#include "SDL.h"
 #include "settings.hpp"
+#include "SDL.h"
 
 using namespace game;
 

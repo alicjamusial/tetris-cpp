@@ -2,11 +2,11 @@
 // Created by Alicja on 2020-03-20.
 //
 #pragma once
+#include "SDL.h"
 #include "Board.hpp"
 #include "Gameplay.hpp"
 #include "GraphicInterface.hpp"
 #include "PieceDefinition.hpp"
-#include <SDL.h>
 #include <cstdint>
 #include <string>
 

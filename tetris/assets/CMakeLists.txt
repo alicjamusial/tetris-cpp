@@ -1,2 +1,5 @@
-configure_file(game_over.bmp game_over.bmp COPYONLY)
-configure_file(legend.bmp legend.bmp COPYONLY)
+file(GLOB files *.bmp)
+foreach(file ${files})
+    get_filename_component(fileName ${file} NAME)
+    configure_file(${fileName} ${fileName} COPYONLY)
+endforeach()

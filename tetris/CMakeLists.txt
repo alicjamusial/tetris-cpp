@@ -3,22 +3,22 @@ set(NAME tetris)
 add_subdirectory(assets)
 
 add_executable(${NAME}
-        main.cpp
-        settings.hpp
+        src/main.cpp
+        include/settings.hpp
 
-        Gameplay.cpp
-        Gameplay.hpp
+        src/Gameplay.cpp
+        include/Gameplay.hpp
 
-        GraphicInterface.cpp
-        GraphicInterface.hpp
+        src/GraphicInterface.cpp
+        include/GraphicInterface.hpp
 
-        Board.cpp
-        Board.hpp
+        src/Board.cpp
+        include/Board.hpp
 
-        PieceDefinition.cpp
-        PieceDefinition.hpp
+        src/PieceDefinition.cpp
+        include/PieceDefinition.hpp
 
-        Tetris.cpp
-        Tetris.hpp
+        src/Tetris.cpp
+        include/Tetris.hpp
 )
 
