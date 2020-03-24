@@ -20,5 +20,5 @@ add_executable(${NAME}
 
         src/Tetris.cpp
         include/Tetris.hpp
-)
+        include/Point.hpp)
 

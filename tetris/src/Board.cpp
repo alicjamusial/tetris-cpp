@@ -19,11 +19,11 @@ void Board::CreateBoard()
     }
 }
 
-void Board::StorePiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation)
+void Board::StorePiece(Point point, int16_t piece, int16_t rotation)
 {
-    for(int16_t i1 = pX, i2 = 0; i1 < pX + pieceBlocks; i1++, i2++)
+    for(int16_t i1 = point.x, i2 = 0; i1 < point.x + pieceBlocks; i1++, i2++)
     {
-        for(int16_t j1 = pY, j2 = 0; j1 < pY + pieceBlocks; j1++, j2++)
+        for(int16_t j1 = point.y, j2 = 0; j1 < point.y + pieceBlocks; j1++, j2++)
         {
             if(PieceDefinition::GetBlockType(piece, rotation, j2, i2) != Blank)
             {
@@ -45,9 +45,9 @@ bool Board::IsGameOver()
     return false;
 }
 
-void Board::DeleteLine(int16_t pY)
+void Board::DeleteLine(int16_t y)
 {
-    for(int16_t j = pY; j > 0; j--)
+    for(int16_t j = y; j > 0; j--)
     {
         for(auto& boardField: _boardFields)
         {
@@ -72,16 +72,16 @@ void Board::DeletePossibleLines()
     }
 }
 
-bool Board::IsFreeBlock(int16_t pX, int16_t pY)
+bool Board::IsFreeBlock(Point point)
 {
-    return _boardFields[pX][pY] == PositionStatus::PositionFree;
+    return _boardFields[point.x][point.y] == PositionStatus::PositionFree;
 }
 
-bool Board::IsPossibleMovement(int16_t pX, int16_t pY, int16_t piece, int16_t rotation)
+bool Board::IsPossibleMovement(Point point, int16_t piece, int16_t rotation)
 {
-    for(int16_t i1 = pX, i2 = 0; i1 < pX + pieceBlocks; i1++, i2++)
+    for(int16_t i1 = point.x, i2 = 0; i1 < point.x + pieceBlocks; i1++, i2++)
     {
-        for(int16_t j1 = pY, j2 = 0; j1 < pY + pieceBlocks; j1++, j2++)
+        for(int16_t j1 = point.y, j2 = 0; j1 < point.y + pieceBlocks; j1++, j2++)
         {
             if(i1 < 0 || i1 > boardWidth - 1 || j1 > boardHeight - 1)
             {
@@ -93,7 +93,7 @@ bool Board::IsPossibleMovement(int16_t pX, int16_t pY, int16_t piece, int16_t ro
             if(j1 >= 0)
             {
                 if((PieceDefinition::GetBlockType(piece, rotation, j2, i2) != Blank) &&
-                   (!IsFreeBlock(i1, j1)))
+                   (!IsFreeBlock(Point{i1, j1})))
                 {
                     return false;
                 }

@@ -2,6 +2,7 @@
 // Created by Alicja on 2020-03-04.
 //
 #pragma once
+#include "Point.hpp"
 #include "settings.hpp"
 #include <cstdint>
 
@@ -14,11 +15,11 @@ namespace game
 
         static int16_t GetYPosInPixels(int16_t pPos);
 
-        bool IsFreeBlock(int16_t pX, int16_t pY);
+        bool IsFreeBlock(Point point);
 
-        bool IsPossibleMovement(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
+        bool IsPossibleMovement(Point point, int16_t piece, int16_t rotation);
 
-        void StorePiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
+        void StorePiece(Point point, int16_t piece, int16_t rotation);
 
         void DeletePossibleLines();
 

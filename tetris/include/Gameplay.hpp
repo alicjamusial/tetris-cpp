@@ -26,6 +26,7 @@ namespace game
         // current falling piece
         int16_t currentPosX{}, currentPosY{};
         int16_t currentPiece{}, currentRotation{};
+        Point currentPoint{};
 
         void MoveLeft();
         void MoveRight();
@@ -41,11 +42,12 @@ namespace game
 
         int16_t _nextPosX{}, _nextPosY{};
         int16_t _nextPiece{}, _nextRotation{};
+        Point _nextPoint{};
 
         Board* _board;
         GraphicInterface* _graphicInterface;
 
-        void DrawPiece(int16_t pX, int16_t pY, int16_t piece, int16_t rotation);
+        void DrawPiece(Point point, int16_t piece, int16_t rotation);
 
         void DrawBoardAndLegend();
 

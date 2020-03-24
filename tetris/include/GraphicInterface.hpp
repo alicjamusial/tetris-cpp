@@ -6,6 +6,7 @@
 
 #include "SDL.h"
 #include "settings.hpp"
+#include "Point.hpp"
 #include <cstdint>
 #include <map>
 #include <vector>
@@ -21,7 +22,7 @@ namespace game
 
         void InitImages();
 
-        void DrawRectangle(int16_t pX1, int16_t pY1, int16_t pX2, int16_t pY2, ColorEnum pC);
+        void DrawRectangle(Point point, int16_t h, int16_t w, ColorEnum pC);
 
         void ClearScreen();
 
