@@ -54,5 +54,6 @@ namespace game
         void StorePiece();
 
         static int16_t GetRand(int16_t max);
+        static int16_t GetNextRotation(int16_t rotation);
     };
 }

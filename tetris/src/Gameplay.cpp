@@ -68,9 +68,9 @@ void Gameplay::MoveBottom()
 
 void Gameplay::Rotate()
 {
-    if(_board->IsPossibleMovement(currentPosX, currentPosY, currentPiece, (currentRotation + 1) % 4))
+    if(_board->IsPossibleMovement(currentPosX, currentPosY, currentPiece, GetNextRotation(currentRotation)))
     {
-        currentRotation = (currentRotation + 1) % 4;
+        currentRotation = GetNextRotation(currentRotation);
     }
 }
 
@@ -194,4 +194,9 @@ void Gameplay::DrawBoardAndLegend()
 int16_t Gameplay::GetRand(int16_t max)
 {
     return rand() % max + 1;
+}
+
+int16_t Gameplay::GetNextRotation(int16_t rotation)
+{
+    return (rotation + 1) % 4;
 }
