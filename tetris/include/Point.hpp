@@ -13,5 +13,4 @@ public:
     Point Right();
     Point Left();
     Point Down();
-    Point Up();
 };

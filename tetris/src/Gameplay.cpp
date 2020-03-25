@@ -91,9 +91,9 @@ void Gameplay::Fall()
 void Gameplay::StorePiece()
 {
     _board->StorePiece(currentPoint, currentPiece, currentRotation);
-//    _board->DeletePossibleLines();
-//
-//    CheckIfGameOver();
+    _board->DeletePossibleLines();
+
+    CheckIfGameOver();
     CreateNewPiece();
 }
 
@@ -184,7 +184,7 @@ void Gameplay::DrawBoardAndLegend()
             if(!_board->IsFreeBlock(Point{i, j}))
             {
                 int16_t x = boardLineX1 + (i * blockSize) + boardLineWidth + blockMargin;
-                int16_t y = boardLineX1 + (i * blockSize) + boardLineWidth + blockMargin;
+                int16_t y = boardLineY1 + (j * blockSize);
                 _graphicInterface->DrawRectangle(
                     Point{x, y},
                     blockSize - blockMargin,

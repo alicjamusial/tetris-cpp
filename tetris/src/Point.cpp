@@ -6,20 +6,18 @@
 
 Point Point::Right()
 {
-    return Point{x++, y};
+    int16_t newX = x + 1;
+    return Point{newX, y};
 }
 
 Point Point::Left()
 {
-    return Point{x--, y};
+    int16_t newX = x - 1;
+    return Point{newX, y};
 }
 
 Point Point::Down()
 {
-    return Point{x, y++};
-}
-
-Point Point::Up()
-{
-    return Point{x, y--};
+    int16_t newY = y + 1;
+    return Point{x, newY};
 }
