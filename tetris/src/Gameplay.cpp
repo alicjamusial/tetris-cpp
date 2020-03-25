@@ -27,14 +27,14 @@ void Gameplay::InitGameplay()
     srand((unsigned int)time(nullptr));
 
     // Init current falling currentPiece
-    currentPiece = GetRand(1);
+    currentPiece = GetRand();
     currentRotation = GetRand(2);
     int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
     int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
     currentPoint = Point{x, y};
 
     // Init next currentPiece next to board
-    _nextPiece = GetRand(1);
+    _nextPiece = GetRand();
     _nextRotation = GetRand(2);
     int16_t nextX = boardWidth + nextPieceMargin;
     int16_t nextY = nextPieceMargin;
@@ -143,7 +143,7 @@ void Gameplay::CreateNewPiece()
     currentPoint = Point{x, y};
 
     // Init new next currentPiece
-    _nextPiece = GetRand(1);
+    _nextPiece = GetRand();
     _nextRotation = GetRand(2);
 }
 

@@ -62,7 +62,7 @@ namespace game
 
         void StorePiece();
 
-        int16_t GetRand(int16_t max);
+        int16_t GetRand(int16_t prescaler = 1);
         static int16_t GetNextRotation(int16_t rotation);
     };
 }
