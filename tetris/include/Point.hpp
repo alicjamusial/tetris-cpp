@@ -5,7 +5,13 @@
 #pragma once
 #include <cstdint>
 
-struct Point {
+class Point {
+public:
     int16_t x;
     int16_t y;
+
+    Point Right();
+    Point Left();
+    Point Down();
+    Point Up();
 };

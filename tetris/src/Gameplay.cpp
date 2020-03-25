@@ -23,55 +23,47 @@ void Gameplay::InitGameplay()
     // Init current falling currentPiece
     currentPiece = GetRand(6);
     currentRotation = GetRand(3);
-    currentPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
-    currentPosY = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
-    currentPoint = Point{currentPosX, currentPosY};
+    int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
+    int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
+    currentPoint = Point{x, y};
 
     // Init next currentPiece next to board
     _nextPiece = GetRand(6);
     _nextRotation = GetRand(3);
-    _nextPosX = boardWidth + nextPieceMargin;
-    _nextPosY = nextPieceMargin;
-    _nextPoint = Point{_nextPosX, _nextPosY};
+    int16_t nextX = boardWidth + nextPieceMargin;
+    int16_t nextY = nextPieceMargin;
+    _nextPoint = Point{nextX, nextY};
 }
 
 void Gameplay::MoveRight()
 {
-    int16_t xRight = currentPosX + 1;
-    Point pointRight{xRight, currentPosY};
-    if(_board->IsPossibleMovement(pointRight, currentPiece, currentRotation))
+    if(_board->IsPossibleMovement(currentPoint.Right(), currentPiece, currentRotation))
     {
-        currentPosX++;
+        currentPoint = currentPoint.Right();
     }
 }
 
 void Gameplay::MoveLeft()
 {
-    int16_t xLeft = currentPosX - 1;
-    Point pointLeft{xLeft, currentPosY};
-    if(_board->IsPossibleMovement(pointLeft, currentPiece, currentRotation))
+    if(_board->IsPossibleMovement(currentPoint.Left(), currentPiece, currentRotation))
     {
-        currentPosX--;
+        currentPoint = currentPoint.Left();
     }
 }
 
 void Gameplay::MoveDown()
 {
-    int16_t yDown = currentPosY + 1;
-    Point pointDown{currentPosX, yDown};
-    if(_board->IsPossibleMovement(pointDown, currentPiece, currentRotation))
+    if(_board->IsPossibleMovement(currentPoint.Down(), currentPiece, currentRotation))
     {
-        currentPosY++;
+        currentPoint = currentPoint.Down();
     }
 }
 
 void Gameplay::MoveBottom()
 {
-    int16_t yDown = currentPosY + 1;
-    Point pointDown{currentPosX, yDown};
-    while(_board->IsPossibleMovement(pointDown, currentPiece, currentRotation))
+    while(_board->IsPossibleMovement(currentPoint.Down(), currentPiece, currentRotation))
     {
-        currentPosY++;
+        currentPoint = currentPoint.Down();
     }
     StorePiece();
 }
@@ -86,11 +78,9 @@ void Gameplay::Rotate()
 
 void Gameplay::Fall()
 {
-    int16_t yDown = currentPosY + 1;
-    Point pointDown{currentPosX, yDown};
-    if(_gameState == Game && _board->IsPossibleMovement(pointDown, currentPiece, currentRotation))
+    if(_gameState == Game && _board->IsPossibleMovement(currentPoint.Down(), currentPiece, currentRotation))
     {
-        currentPosY++;
+        currentPoint = currentPoint.Down();
     }
     else
     {
@@ -101,9 +91,9 @@ void Gameplay::Fall()
 void Gameplay::StorePiece()
 {
     _board->StorePiece(currentPoint, currentPiece, currentRotation);
-    _board->DeletePossibleLines();
-
-    CheckIfGameOver();
+//    _board->DeletePossibleLines();
+//
+//    CheckIfGameOver();
     CreateNewPiece();
 }
 
@@ -142,9 +132,9 @@ void Gameplay::CreateNewPiece()
     // Get next currentPiece and make it current
     currentPiece = _nextPiece;
     currentRotation = _nextRotation;
-    currentPosX = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
-    currentPosY = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
-    currentPoint = Point{currentPosX, currentPosY};
+    int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
+    int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
+    currentPoint = Point{x, y};
 
     // Init new next currentPiece
     _nextPiece = GetRand(6);

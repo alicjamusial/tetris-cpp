@@ -13,3 +13,5 @@ enable_testing()
 
 target_include_directories(${NAME} PRIVATE tetris/include)
 target_link_libraries(${NAME} SDL2-static)
+
+set_property(TARGET ${NAME} PROPERTY CXX_STANDARD 14)

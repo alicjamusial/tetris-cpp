@@ -24,7 +24,6 @@ namespace game
         void CreateNewPiece();
 
         // current falling piece
-        int16_t currentPosX{}, currentPosY{};
         int16_t currentPiece{}, currentRotation{};
         Point currentPoint{};
 
@@ -40,7 +39,6 @@ namespace game
     private:
         GameState _gameState{Game};
 
-        int16_t _nextPosX{}, _nextPosY{};
         int16_t _nextPiece{}, _nextRotation{};
         Point _nextPoint{};
 
