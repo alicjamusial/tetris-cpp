@@ -10,7 +10,7 @@
 
 using namespace game;
 
-Gameplay::Gameplay(Board* pBoard, GraphicInterface* pGraphicInterface)
+Gameplay::Gameplay(Board* pBoard, GraphicInterface* pGraphicInterface) : _distribution(0, 6)
 {
     _board = pBoard;
     _graphicInterface = pGraphicInterface;
@@ -27,15 +27,15 @@ void Gameplay::InitGameplay()
     srand((unsigned int)time(nullptr));
 
     // Init current falling currentPiece
-    currentPiece = GetRand(6);
-    currentRotation = GetRand(3);
+    currentPiece = GetRand(1);
+    currentRotation = GetRand(2);
     int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
     int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
     currentPoint = Point{x, y};
 
     // Init next currentPiece next to board
-    _nextPiece = GetRand(6);
-    _nextRotation = GetRand(3);
+    _nextPiece = GetRand(1);
+    _nextRotation = GetRand(2);
     int16_t nextX = boardWidth + nextPieceMargin;
     int16_t nextY = nextPieceMargin;
     _nextPoint = Point{nextX, nextY};
@@ -143,8 +143,8 @@ void Gameplay::CreateNewPiece()
     currentPoint = Point{x, y};
 
     // Init new next currentPiece
-    _nextPiece = GetRand(6);
-    _nextRotation = GetRand(3);
+    _nextPiece = GetRand(1);
+    _nextRotation = GetRand(2);
 }
 
 void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
@@ -190,12 +190,16 @@ void Gameplay::DrawBoardAndLegend()
 void Gameplay::CallAction(uint16_t key)
 {
     auto action = _gameAction[key];
-    (this->*action)();
+    if(action)
+    {
+        (this->*action)();
+    }
 }
 
-int16_t Gameplay::GetRand(int16_t max)
+int16_t Gameplay::GetRand(int16_t prescaler)
 {
-    return rand() % max + 1;
+    _engine.seed(_randomDevice());
+    return _distribution(_engine) / prescaler;
 }
 
 int16_t Gameplay::GetNextRotation(int16_t rotation)

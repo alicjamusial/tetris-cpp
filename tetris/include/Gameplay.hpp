@@ -5,6 +5,7 @@
 #pragma once
 #include "Board.hpp"
 #include "GraphicInterface.hpp"
+#include <random>
 
 namespace game
 {
@@ -43,6 +44,10 @@ namespace game
 
         std::map<uint16_t, void (Gameplay::*)()> _gameAction;
 
+        std::random_device _randomDevice;
+        std::mt19937 _engine;
+        std::uniform_int_distribution<int> _distribution;
+
         int16_t _nextPiece{}, _nextRotation{};
         Point _nextPoint{};
 
@@ -57,7 +62,7 @@ namespace game
 
         void StorePiece();
 
-        static int16_t GetRand(int16_t max);
+        int16_t GetRand(int16_t max);
         static int16_t GetNextRotation(int16_t rotation);
     };
 }
