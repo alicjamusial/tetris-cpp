@@ -25,3 +25,7 @@ add_executable(${NAME}
         include/Point.hpp
         )
 
+target_include_directories(${NAME} PRIVATE include)
+target_link_libraries(${NAME} SDL2-static)
+
+set_property(TARGET ${NAME} PROPERTY CXX_STANDARD 14)
