@@ -57,36 +57,7 @@ void Tetris::GameRun()
         {
             if(event.type == SDL_KEYDOWN)
             {
-                uint16_t key = event.key.keysym.sym;
-                switch(key)
-                {
-                    case(SDLK_d):
-                        gameplay.MoveRight();
-                        break;
-
-                    case(SDLK_a):
-                        gameplay.MoveLeft();
-                        break;
-
-                    case(SDLK_s):
-                        gameplay.MoveDown();
-                        break;
-
-                    case(SDLK_x):
-                        gameplay.MoveBottom();
-                        break;
-
-                    case(SDLK_z):
-                        gameplay.Rotate();
-                        break;
-
-                    case(SDLK_r):
-                        gameplay.RestartGame();
-                        break;
-
-                    default:
-                        break;
-                }
+                gameplay.CallAction(event.key.keysym.sym);
             }
             if(event.type == SDL_QUIT)
             {

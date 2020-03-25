@@ -14,6 +14,12 @@ Gameplay::Gameplay(Board* pBoard, GraphicInterface* pGraphicInterface)
 {
     _board = pBoard;
     _graphicInterface = pGraphicInterface;
+    _gameAction = {{SDLK_d, &Gameplay::MoveRight},
+                   {SDLK_a, &Gameplay::MoveLeft},
+                   {SDLK_s, &Gameplay::MoveDown},
+                   {SDLK_x, &Gameplay::MoveBottom},
+                   {SDLK_z, &Gameplay::Rotate},
+                   {SDLK_r, &Gameplay::RestartGame}};
 }
 
 void Gameplay::InitGameplay()
@@ -179,6 +185,12 @@ void Gameplay::DrawBoardAndLegend()
             }
         }
     }
+}
+
+void Gameplay::CallAction(uint16_t key)
+{
+    auto action = _gameAction[key];
+    (this->*action)();
 }
 
 int16_t Gameplay::GetRand(int16_t max)

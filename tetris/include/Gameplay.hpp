@@ -27,6 +27,8 @@ namespace game
         int16_t currentPiece{}, currentRotation{};
         Point currentPoint{};
 
+        void CallAction(uint16_t key);
+
         void MoveLeft();
         void MoveRight();
         void MoveDown();
@@ -38,6 +40,8 @@ namespace game
 
     private:
         GameState _gameState{Game};
+
+        std::map<uint16_t, void (Gameplay::*)()> _gameAction;
 
         int16_t _nextPiece{}, _nextRotation{};
         Point _nextPoint{};
