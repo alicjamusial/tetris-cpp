@@ -29,9 +29,16 @@ GraphicInterface::~GraphicInterface()
 
 void GraphicInterface::InitImages()
 {
-    _gameOverImage = SDL_LoadBMP("assets/game_over.bmp");
+    char* path = SDL_GetBasePath();
+
+    std::string gameOverImg = "assets\\game_over.bmp";
+    std::string gameOverPath = std::string(path) + gameOverImg;
+    _gameOverImage = SDL_LoadBMP(gameOverPath.c_str());
     _gameOverTexture = SDL_CreateTextureFromSurface(_renderer, _gameOverImage);
-    _legendImage = SDL_LoadBMP("assets/legend.bmp");
+
+    std::string legendImg = "assets\\legend.bmp";
+    std::string legendPath = std::string(path) + legendImg;
+    _legendImage = SDL_LoadBMP(legendPath.c_str());
     _legendTexture = SDL_CreateTextureFromSurface(_renderer, _legendImage);
 }
 
