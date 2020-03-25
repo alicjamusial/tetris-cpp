@@ -143,25 +143,19 @@ void Gameplay::CreateNewPiece()
 
 void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
 {
-    int16_t mPixelsX = game::Board::GetXPosInPixels(point.x);
-    int16_t mPixelsY = game::Board::GetYPosInPixels(point.y);
-
     for(int16_t i = 0; i < pieceBlocks; i++)
     {
         for(int16_t j = 0; j < pieceBlocks; j++)
         {
-            ColorEnum currentPieceColor =
-                PieceDefinition::GetBlockType(piece, rotation, j, i) == RotationPiece ?
-                ColorEnum::ColorThird :
-                ColorEnum::ColorPrimary;
-
-            if(PieceDefinition::GetBlockType(piece, rotation, j, i) != Blank)
+            int16_t blockType = PieceDefinition::GetBlockType(piece, rotation, j, i);
+            if(blockType != Blank)
             {
+                int16_t mPixelsX = game::Board::GetXPosInPixels(point.x);
+                int16_t mPixelsY = game::Board::GetYPosInPixels(point.y);
+
                 int16_t x = mPixelsX + (i * blockSize) + boardLineWidth + blockMargin;
                 int16_t y = mPixelsY + j * blockSize;
-                Point rectangleCorner{x, y};
-                _graphicInterface->DrawRectangle(
-                    rectangleCorner, blockSize - blockMargin, blockSize - blockMargin, currentPieceColor);
+                _graphicInterface->DrawBlock(Point{x, y}, blockType);
             }
         }
     }
@@ -169,27 +163,19 @@ void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
 
 void Gameplay::DrawBoardAndLegend()
 {
-    Point pointBoard1{boardLineX1, boardLineY1};
-    Point pointBoard2{boardLineX2, boardLineY2};
     _graphicInterface->DrawLegend();
-    _graphicInterface->DrawRectangle(
-        pointBoard1, boardLineWidth, boardHeight * blockSize, ColorEnum::ColorPrimary);
-    _graphicInterface->DrawRectangle(
-        pointBoard2, boardLineWidth, boardHeight * blockSize, ColorEnum::ColorPrimary);
+    _graphicInterface->DrawBoardLines();
 
     for(int16_t i = 0; i < boardWidth; i++)
     {
         for(int16_t j = 0; j < boardHeight; j++)
         {
-            if(!_board->IsFreeBlock(Point{i, j}))
+            Point blockPoint = Point{i, j};
+            if(!_board->IsFreeBlock(blockPoint))
             {
                 int16_t x = boardLineX1 + (i * blockSize) + boardLineWidth + blockMargin;
                 int16_t y = boardLineY1 + (j * blockSize);
-                _graphicInterface->DrawRectangle(
-                    Point{x, y},
-                    blockSize - blockMargin,
-                    blockSize - blockMargin,
-                    ColorEnum::ColorPrimary);
+                _graphicInterface->DrawBlock(Point{x, y}, 1);
             }
         }
     }

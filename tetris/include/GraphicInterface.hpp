@@ -4,9 +4,9 @@
 
 #pragma once
 
+#include "Point.hpp"
 #include "SDL.h"
 #include "settings.hpp"
-#include "Point.hpp"
 #include <cstdint>
 #include <map>
 #include <vector>
@@ -22,7 +22,8 @@ namespace game
 
         void InitImages();
 
-        void DrawRectangle(Point point, int16_t h, int16_t w, ColorEnum pC);
+        void DrawBoardLines();
+        void DrawBlock(Point point, int16_t blockType);
 
         void ClearScreen();
 
@@ -47,5 +48,7 @@ namespace game
                                              legendImgHeight};
 
         std::map<ColorEnum, std::vector<uint32_t>> _colorsMap;
+
+        void DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnum color);
     };
 }
