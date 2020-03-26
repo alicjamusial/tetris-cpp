@@ -21,9 +21,9 @@ void Board::CreateBoard()
 
 void Board::StorePiece(Point point, int16_t piece, int16_t rotation)
 {
-    for(int16_t i1 = point.x, i2 = 0; i1 < point.x + pieceBlocks; i1++, i2++)
+    for(int16_t i1 = point.GetX(), i2 = 0; i1 < point.GetX() + pieceBlocks; i1++, i2++)
     {
-        for(int16_t j1 = point.y, j2 = 0; j1 < point.y + pieceBlocks; j1++, j2++)
+        for(int16_t j1 = point.GetY(), j2 = 0; j1 < point.GetY() + pieceBlocks; j1++, j2++)
         {
             if(PieceDefinition::GetBlockType(piece, rotation, j2, i2) == NormalPiece ||
                PieceDefinition::GetBlockType(piece, rotation, j2, i2) == RotationPiece)
@@ -84,14 +84,14 @@ void Board::DeletePossibleLines()
 
 bool Board::IsFreeBlock(Point point)
 {
-    return _boardFields[point.x][point.y] == PositionStatus::PositionFree;
+    return _boardFields[point.GetX()][point.GetY()] == PositionStatus::PositionFree;
 }
 
 bool Board::IsPossibleMovement(Point point, int16_t piece, int16_t rotation)
 {
-    for(int16_t i1 = point.x, i2 = 0; i1 < point.x + pieceBlocks; i1++, i2++)
+    for(int16_t i1 = point.GetX(), i2 = 0; i1 < point.GetX() + pieceBlocks; i1++, i2++)
     {
-        for(int16_t j1 = point.y, j2 = 0; j1 < point.y + pieceBlocks; j1++, j2++)
+        for(int16_t j1 = point.GetY(), j2 = 0; j1 < point.GetY() + pieceBlocks; j1++, j2++)
         {
             if(i1 < 0 || i1 > boardWidth - 1 || j1 > boardHeight - 1)
             {
@@ -115,7 +115,7 @@ bool Board::IsPossibleMovement(Point point, int16_t piece, int16_t rotation)
 
 Point Board::GetPosInPixels(Point point)
 {
-    int16_t x = boardLineX1 + (point.x * blockSize);
-    int16_t y = boardLineY1 + (point.y * blockSize);
+    int16_t x = boardLineX1 + (point.GetX() * blockSize);
+    int16_t y = boardLineY1 + (point.GetY() * blockSize);
     return Point{x, y};
 }

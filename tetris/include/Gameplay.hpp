@@ -48,9 +48,9 @@ namespace game
         std::uniform_int_distribution<int> _distributionRotation;
 
         int16_t _currentPiece{}, _currentRotation{};
-        Point _currentPoint{};
+        Point _currentPoint{0, 0};
         int16_t _nextPiece{}, _nextRotation{};
-        Point _nextPoint{};
+        Point _nextPoint{0, 0};
 
         std::unique_ptr<Board> _board;
         GraphicInterface& _graphicInterface;

@@ -78,7 +78,7 @@ void GraphicInterface::DrawBoardLines()
 
 void GraphicInterface::DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnum color)
 {
-    SDL_Rect fillRect = {point.x, point.y, w, h};
+    SDL_Rect fillRect = {point.GetX(), point.GetY(), w, h};
     SDL_SetRenderDrawColor(
         _renderer.get(), _colorsMap[color][0], _colorsMap[color][1], _colorsMap[color][2], _colorsMap[color][3]);
     SDL_RenderFillRect(_renderer.get(), &fillRect);
@@ -90,7 +90,7 @@ void GraphicInterface::DrawBlock(Point point, int16_t blockType)
 
     int16_t width = blockSize - blockMargin;
     int16_t height = blockSize - blockMargin;
-    SDL_Rect fillRect = {point.x, point.y, width, height};
+    SDL_Rect fillRect = {point.GetX(), point.GetY(), width, height};
 
     SDL_SetRenderDrawColor(
         _renderer.get(),

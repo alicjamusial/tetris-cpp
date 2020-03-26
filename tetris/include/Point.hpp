@@ -8,10 +8,16 @@
 class Point
 {
 public:
-    int16_t x;
-    int16_t y;
+    Point(int16_t pX, int16_t pY);
+
+    int16_t GetX();
+    int16_t GetY();
 
     Point Right();
     Point Left();
     Point Down();
+
+private:
+    int16_t x;
+    int16_t y;
 };
