@@ -19,10 +19,6 @@ namespace game
     public:
         explicit GraphicInterface(SDL_Window* window);
 
-        ~GraphicInterface();
-
-        void InitImages();
-
         void DrawBoardLines();
         void DrawBlock(Point point, int16_t blockType);
 
@@ -33,16 +29,13 @@ namespace game
         void DrawGameOver();
         void DrawLegend();
 
-        static SDL_Surface* SDL_LoadGameOverImage();
-        static SDL_Surface* SDL_LoadLegendImage();
-
     private:
         std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)> _renderer;
         std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _gameOverImage;
         std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _legendImage;
-        
-        SDL_Texture* _gameOverTexture{nullptr};
-        SDL_Texture* _legendTexture{nullptr};
+
+        std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> _gameOverTexture;
+        std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> _legendTexture;
 
         SDL_Rect const _gameOverImgPosition = {screenWidth / 2 - gameOverImgWidth / 2,
                                                screenHeight / 2 - gameOverImgHeight / 2,
@@ -56,5 +49,10 @@ namespace game
         std::map<ColorEnum, std::vector<uint32_t>> _colorsMap;
 
         void DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnum color);
+
+        static SDL_Surface* SDL_LoadGameOverImage();
+        static SDL_Surface* SDL_LoadLegendImage();
+        SDL_Texture* SDL_LoadGameOverTexture();
+        SDL_Texture* SDL_LoadLegendTexture();
     };
 }

@@ -12,17 +12,13 @@ using namespace game;
 GraphicInterface::GraphicInterface(SDL_Window* window) :
     _renderer{SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED), SDL_DestroyRenderer},
     _gameOverImage{GraphicInterface::SDL_LoadGameOverImage(), SDL_FreeSurface},
-    _legendImage{GraphicInterface::SDL_LoadLegendImage(), SDL_FreeSurface}
+    _legendImage{GraphicInterface::SDL_LoadLegendImage(), SDL_FreeSurface},
+    _gameOverTexture{GraphicInterface::SDL_LoadGameOverTexture(), SDL_DestroyTexture},
+    _legendTexture{GraphicInterface::SDL_LoadLegendTexture(), SDL_DestroyTexture}
 {
     _colorsMap = {{ColorEnum::ColorBoard, {0x8c, 0x8a, 0x93, 0xFF}},
                   {ColorEnum::ColorPrimary, {0xd1, 0xf0, 0xb1, 0xFF}},
                   {ColorEnum::ColorThird, {0xb6, 0xcb, 0x9e, 0xFF}}};
-}
-
-GraphicInterface::~GraphicInterface()
-{
-    SDL_DestroyTexture(_gameOverTexture);
-    SDL_DestroyTexture(_legendTexture);
 }
 
 SDL_Surface* GraphicInterface::SDL_LoadGameOverImage() {
@@ -41,10 +37,12 @@ SDL_Surface* GraphicInterface::SDL_LoadLegendImage() {
     return SDL_LoadBMP(legendPath.c_str());
 }
 
-void GraphicInterface::InitImages()
-{
-    _gameOverTexture = SDL_CreateTextureFromSurface(_renderer.get(), _gameOverImage.get());
-    _legendTexture = SDL_CreateTextureFromSurface(_renderer.get(), _legendImage.get());
+SDL_Texture* GraphicInterface::SDL_LoadGameOverTexture() {
+    return SDL_CreateTextureFromSurface(_renderer.get(), _gameOverImage.get());
+}
+
+SDL_Texture* GraphicInterface::SDL_LoadLegendTexture() {
+    return SDL_CreateTextureFromSurface(_renderer.get(), _legendImage.get());
 }
 
 void GraphicInterface::ClearScreen()
@@ -94,12 +92,12 @@ void GraphicInterface::DrawBlock(Point point, int16_t blockType)
 
 void GraphicInterface::DrawGameOver()
 {
-    SDL_RenderCopy(_renderer.get(), _gameOverTexture, nullptr, &_gameOverImgPosition);
+    SDL_RenderCopy(_renderer.get(), _gameOverTexture.get(), nullptr, &_gameOverImgPosition);
 }
 
 void GraphicInterface::DrawLegend()
 {
-    SDL_RenderCopy(_renderer.get(), _legendTexture, nullptr, &_legendImgPosition);
+    SDL_RenderCopy(_renderer.get(), _legendTexture.get(), nullptr, &_legendImgPosition);
 }
 
 void GraphicInterface::UpdateScreen()

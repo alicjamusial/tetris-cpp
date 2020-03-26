@@ -39,7 +39,6 @@ void Tetris::GameRun()
     Gameplay gameplay(&board, &graphicInterface);
 
     board.CreateBoard();
-    graphicInterface.InitImages();
     gameplay.InitGameplay();
 
     float time1 = SDL_GetTicks();
