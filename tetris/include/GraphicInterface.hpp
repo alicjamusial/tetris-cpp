@@ -33,12 +33,17 @@ namespace game
         void DrawGameOver();
         void DrawLegend();
 
+        static SDL_Surface* SDL_LoadGameOverImage();
+        static SDL_Surface* SDL_LoadLegendImage();
+
     private:
         std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)> _renderer;
-        SDL_Surface* _gameOverImage{nullptr};
+        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _gameOverImage;
+        std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> _legendImage;
+        
         SDL_Texture* _gameOverTexture{nullptr};
-        SDL_Surface* _legendImage{nullptr};
         SDL_Texture* _legendTexture{nullptr};
+
         SDL_Rect const _gameOverImgPosition = {screenWidth / 2 - gameOverImgWidth / 2,
                                                screenHeight / 2 - gameOverImgHeight / 2,
                                                gameOverImgWidth,
