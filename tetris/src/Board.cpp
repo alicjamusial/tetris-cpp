@@ -113,12 +113,9 @@ bool Board::IsPossibleMovement(Point point, int16_t piece, int16_t rotation)
     return true;
 }
 
-int16_t Board::GetXPosInPixels(int16_t pPos)
+Point Board::GetPosInPixels(Point point)
 {
-    return boardLineX1 + (pPos * blockSize);
-}
-
-int16_t Board::GetYPosInPixels(int16_t pPos)
-{
-    return boardLineY1 + (pPos * blockSize);
+    int16_t x = boardLineX1 + (point.x * blockSize);
+    int16_t y = boardLineY1 + (point.y * blockSize);
+    return Point{x, y};
 }

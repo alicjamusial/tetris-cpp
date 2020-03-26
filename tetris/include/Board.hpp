@@ -11,9 +11,7 @@ namespace game
     class Board
     {
     public:
-        static int16_t GetXPosInPixels(int16_t pPos);
-
-        static int16_t GetYPosInPixels(int16_t pPos);
+        static Point GetPosInPixels(Point point);
 
         bool IsFreeBlock(Point point);
 

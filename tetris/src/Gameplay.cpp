@@ -153,11 +153,10 @@ void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
             int16_t blockType = PieceDefinition::GetBlockType(piece, rotation, j, i);
             if(blockType != Blank)
             {
-                int16_t mPixelsX = game::Board::GetXPosInPixels(point.x);
-                int16_t mPixelsY = game::Board::GetYPosInPixels(point.y);
+                Point pixels = game::Board::GetPosInPixels(point);
 
-                int16_t x = mPixelsX + (i * blockSize) + boardLineWidth + blockMargin;
-                int16_t y = mPixelsY + j * blockSize;
+                int16_t x = pixels.x + (i * blockSize) + boardLineWidth + blockMargin;
+                int16_t y = pixels.y + j * blockSize;
                 _graphicInterface.DrawBlock(Point{x, y}, blockType);
             }
         }
