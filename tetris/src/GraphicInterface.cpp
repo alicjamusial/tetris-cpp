@@ -21,27 +21,29 @@ GraphicInterface::GraphicInterface(SDL_Window* window) :
                   {ColorEnum::ColorThird, {0xb6, 0xcb, 0x9e, 0xFF}}};
 }
 
-SDL_Surface* GraphicInterface::SDL_LoadGameOverImage() {
+SDL_Surface* GraphicInterface::SDL_LoadGameOverImage()
+{
     char* path = SDL_GetBasePath();
-
     std::string gameOverImg = "assets\\game_over.bmp";
     std::string gameOverPath = std::string(path) + gameOverImg;
     return SDL_LoadBMP(gameOverPath.c_str());
 }
 
-SDL_Surface* GraphicInterface::SDL_LoadLegendImage() {
+SDL_Surface* GraphicInterface::SDL_LoadLegendImage()
+{
     char* path = SDL_GetBasePath();
-
     std::string legendImg = "assets\\legend.bmp";
     std::string legendPath = std::string(path) + legendImg;
     return SDL_LoadBMP(legendPath.c_str());
 }
 
-SDL_Texture* GraphicInterface::SDL_LoadGameOverTexture() {
+SDL_Texture* GraphicInterface::SDL_LoadGameOverTexture()
+{
     return SDL_CreateTextureFromSurface(_renderer.get(), _gameOverImage.get());
 }
 
-SDL_Texture* GraphicInterface::SDL_LoadLegendTexture() {
+SDL_Texture* GraphicInterface::SDL_LoadLegendTexture()
+{
     return SDL_CreateTextureFromSurface(_renderer.get(), _legendImage.get());
 }
 

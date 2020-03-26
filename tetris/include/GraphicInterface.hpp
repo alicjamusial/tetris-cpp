@@ -50,8 +50,8 @@ namespace game
 
         void DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnum color);
 
-        static SDL_Surface* SDL_LoadGameOverImage();
-        static SDL_Surface* SDL_LoadLegendImage();
+        SDL_Surface* SDL_LoadGameOverImage();
+        SDL_Surface* SDL_LoadLegendImage();
         SDL_Texture* SDL_LoadGameOverTexture();
         SDL_Texture* SDL_LoadLegendTexture();
     };
