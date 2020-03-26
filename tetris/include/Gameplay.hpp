@@ -46,7 +46,8 @@ namespace game
 
         std::random_device _randomDevice;
         std::mt19937 _engine;
-        std::uniform_int_distribution<int> _distribution;
+        std::uniform_int_distribution<int> _distributionPiece;
+        std::uniform_int_distribution<int> _distributionRotation;
 
         int16_t _nextPiece{}, _nextRotation{};
         Point _nextPoint{};
@@ -62,7 +63,9 @@ namespace game
 
         void StorePiece();
 
-        int16_t GetRand(int16_t prescaler = 1);
+        int16_t GetRandPiece();
+        int16_t GetRandRotation();
+
         static int16_t GetNextRotation(int16_t rotation);
     };
 }

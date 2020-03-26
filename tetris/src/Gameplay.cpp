@@ -11,7 +11,7 @@
 using namespace game;
 
 Gameplay::Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface) :
-    _distribution(0, 6), _board{std::make_unique<Board>()}
+    _distributionPiece(0, 7), _distributionRotation(0, 3), _board{std::make_unique<Board>()}
 {
     _board->CreateBoard();
     _graphicInterface = pGraphicInterface;
@@ -26,15 +26,15 @@ Gameplay::Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface) :
 void Gameplay::InitGameplay()
 {
     // Init current falling currentPiece
-    currentPiece = GetRand();
-    currentRotation = GetRand(2);
+    currentPiece = GetRandPiece();
+    currentRotation = GetRandRotation();
     int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
     int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
     currentPoint = Point{x, y};
 
     // Init next currentPiece next to board
-    _nextPiece = GetRand();
-    _nextRotation = GetRand(2);
+    _nextPiece = GetRandPiece();
+    _nextRotation = GetRandRotation();
     int16_t nextX = boardWidth + nextPieceMargin;
     int16_t nextY = nextPieceMargin;
     _nextPoint = Point{nextX, nextY};
@@ -142,8 +142,8 @@ void Gameplay::CreateNewPiece()
     currentPoint = Point{x, y};
 
     // Init new next currentPiece
-    _nextPiece = GetRand();
-    _nextRotation = GetRand(2);
+    _nextPiece = GetRandPiece();
+    _nextRotation = GetRandRotation();
 }
 
 void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
@@ -195,10 +195,16 @@ void Gameplay::CallAction(uint16_t key)
     }
 }
 
-int16_t Gameplay::GetRand(int16_t prescaler)
+int16_t Gameplay::GetRandPiece()
 {
     _engine.seed(_randomDevice());
-    return _distribution(_engine) / prescaler;
+    return _distributionPiece(_engine);
+}
+
+int16_t Gameplay::GetRandRotation()
+{
+    _engine.seed(_randomDevice());
+    return _distributionRotation(_engine);
 }
 
 int16_t Gameplay::GetNextRotation(int16_t rotation)
