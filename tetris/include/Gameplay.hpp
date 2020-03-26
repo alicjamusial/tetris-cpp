@@ -25,8 +25,6 @@ namespace game
         void CreateNewPiece();
 
         // current falling piece
-        int16_t currentPiece{}, currentRotation{};
-        Point currentPoint{};
 
         void CallAction(uint16_t key);
 
@@ -49,6 +47,8 @@ namespace game
         std::uniform_int_distribution<int> _distributionPiece;
         std::uniform_int_distribution<int> _distributionRotation;
 
+        int16_t _currentPiece{}, _currentRotation{};
+        Point _currentPoint{};
         int16_t _nextPiece{}, _nextRotation{};
         Point _nextPoint{};
 

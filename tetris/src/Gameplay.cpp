@@ -12,6 +12,7 @@ Gameplay::Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface) :
     _distributionPiece(0, 7), _distributionRotation(0, 3), _board{std::make_unique<Board>()}
 {
     _board->CreateBoard();
+    _engine.seed(_randomDevice());
     _graphicInterface = pGraphicInterface;
     _gameAction = {{SDLK_d, &Gameplay::MoveRight},
                    {SDLK_a, &Gameplay::MoveLeft},
@@ -24,11 +25,11 @@ Gameplay::Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface) :
 void Gameplay::InitGameplay()
 {
     // Init current falling currentPiece
-    currentPiece = GetRandPiece();
-    currentRotation = GetRandRotation();
-    int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
-    int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
-    currentPoint = Point{x, y};
+    _currentPiece = GetRandPiece();
+    _currentRotation = GetRandRotation();
+    int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(_currentPiece, _currentRotation);
+    int16_t y = PieceDefinition::GetYInitialPosition(_currentPiece, _currentRotation);
+    _currentPoint = Point{x, y};
 
     // Init next currentPiece next to board
     _nextPiece = GetRandPiece();
@@ -40,50 +41,50 @@ void Gameplay::InitGameplay()
 
 void Gameplay::MoveRight()
 {
-    if(_board->IsPossibleMovement(currentPoint.Right(), currentPiece, currentRotation))
+    if(_board->IsPossibleMovement(_currentPoint.Right(), _currentPiece, _currentRotation))
     {
-        currentPoint = currentPoint.Right();
+        _currentPoint = _currentPoint.Right();
     }
 }
 
 void Gameplay::MoveLeft()
 {
-    if(_board->IsPossibleMovement(currentPoint.Left(), currentPiece, currentRotation))
+    if(_board->IsPossibleMovement(_currentPoint.Left(), _currentPiece, _currentRotation))
     {
-        currentPoint = currentPoint.Left();
+        _currentPoint = _currentPoint.Left();
     }
 }
 
 void Gameplay::MoveDown()
 {
-    if(_board->IsPossibleMovement(currentPoint.Down(), currentPiece, currentRotation))
+    if(_board->IsPossibleMovement(_currentPoint.Down(), _currentPiece, _currentRotation))
     {
-        currentPoint = currentPoint.Down();
+        _currentPoint = _currentPoint.Down();
     }
 }
 
 void Gameplay::MoveBottom()
 {
-    while(_board->IsPossibleMovement(currentPoint.Down(), currentPiece, currentRotation))
+    while(_board->IsPossibleMovement(_currentPoint.Down(), _currentPiece, _currentRotation))
     {
-        currentPoint = currentPoint.Down();
+        _currentPoint = _currentPoint.Down();
     }
     StorePiece();
 }
 
 void Gameplay::Rotate()
 {
-    if(_board->IsPossibleMovement(currentPoint, currentPiece, GetNextRotation(currentRotation)))
+    if(_board->IsPossibleMovement(_currentPoint, _currentPiece, GetNextRotation(_currentRotation)))
     {
-        currentRotation = GetNextRotation(currentRotation);
+        _currentRotation = GetNextRotation(_currentRotation);
     }
 }
 
 void Gameplay::Fall()
 {
-    if(_gameState == Game && _board->IsPossibleMovement(currentPoint.Down(), currentPiece, currentRotation))
+    if(_gameState == Game && _board->IsPossibleMovement(_currentPoint.Down(), _currentPiece, _currentRotation))
     {
-        currentPoint = currentPoint.Down();
+        _currentPoint = _currentPoint.Down();
     }
     else
     {
@@ -93,7 +94,7 @@ void Gameplay::Fall()
 
 void Gameplay::StorePiece()
 {
-    _board->StorePiece(currentPoint, currentPiece, currentRotation);
+    _board->StorePiece(_currentPoint, _currentPiece, _currentRotation);
     _board->DeletePossibleLines();
 
     CheckIfGameOver();
@@ -121,7 +122,7 @@ void Gameplay::DrawScene()
     {
         case Game:
             DrawBoardAndLegend();
-            DrawPiece(currentPoint, currentPiece, currentRotation);
+            DrawPiece(_currentPoint, _currentPiece, _currentRotation);
             DrawPiece(_nextPoint, _nextPiece, _nextRotation);
             break;
         case GameOver:
@@ -133,11 +134,11 @@ void Gameplay::DrawScene()
 void Gameplay::CreateNewPiece()
 {
     // Get next currentPiece and make it current
-    currentPiece = _nextPiece;
-    currentRotation = _nextRotation;
-    int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(currentPiece, currentRotation);
-    int16_t y = PieceDefinition::GetYInitialPosition(currentPiece, currentRotation);
-    currentPoint = Point{x, y};
+    _currentPiece = _nextPiece;
+    _currentRotation = _nextRotation;
+    int16_t x = halfBoardWidth + PieceDefinition::GetXInitialPosition(_currentPiece, _currentRotation);
+    int16_t y = PieceDefinition::GetYInitialPosition(_currentPiece, _currentRotation);
+    _currentPoint = Point{x, y};
 
     // Init new next currentPiece
     _nextPiece = GetRandPiece();
@@ -195,13 +196,11 @@ void Gameplay::CallAction(uint16_t key)
 
 int16_t Gameplay::GetRandPiece()
 {
-    _engine.seed(_randomDevice());
     return _distributionPiece(_engine);
 }
 
 int16_t Gameplay::GetRandRotation()
 {
-    _engine.seed(_randomDevice());
     return _distributionRotation(_engine);
 }
 
