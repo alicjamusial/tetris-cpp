@@ -18,7 +18,7 @@ namespace game
     class Gameplay
     {
     public:
-        Gameplay(std::shared_ptr<GraphicInterface> &pGraphicInterface);
+        Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface);
 
         void InitGameplay();
         void DrawScene();

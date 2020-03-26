@@ -5,7 +5,8 @@
 #pragma once
 #include <cstdint>
 
-class Point {
+class Point
+{
 public:
     int16_t x;
     int16_t y;

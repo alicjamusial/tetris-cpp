@@ -5,8 +5,6 @@
 #include "Gameplay.hpp"
 #include "PieceDefinition.hpp"
 #include "settings.hpp"
-#include <cstdlib>
-#include <ctime>
 
 using namespace game;
 
