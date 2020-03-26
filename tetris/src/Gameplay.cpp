@@ -10,7 +10,7 @@
 
 using namespace game;
 
-Gameplay::Gameplay(Board* pBoard, GraphicInterface* pGraphicInterface) : _distribution(0, 6)
+Gameplay::Gameplay(Board* pBoard, std::shared_ptr<GraphicInterface> &pGraphicInterface) : _distribution(0, 6)
 {
     _board = pBoard;
     _graphicInterface = pGraphicInterface;

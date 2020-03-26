@@ -19,8 +19,6 @@ namespace game
 
     private:
         std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _window;
-
         bool _running{true};
-        //        SDL_Window* _window{nullptr};
     };
 }
