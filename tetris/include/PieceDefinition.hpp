@@ -8,13 +8,6 @@
 
 namespace game
 {
-    enum pieceTypes
-    {
-        Blank,
-        NormalPiece,
-        RotationPiece
-    };
-
     class PieceDefinition
     {
     public:

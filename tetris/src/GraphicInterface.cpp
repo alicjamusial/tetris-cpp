@@ -77,7 +77,7 @@ void GraphicInterface::DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnu
 
 void GraphicInterface::DrawBlock(Point point, int16_t blockType)
 {
-    ColorEnum currentPieceColor = blockType == 2 ? ColorEnum::ColorThird : ColorEnum::ColorPrimary;
+    ColorEnum currentPieceColor = blockType == NormalPiece ? ColorEnum::ColorPrimary : ColorEnum::ColorThird;
 
     int16_t width = blockSize - blockMargin;
     int16_t height = blockSize - blockMargin;

@@ -45,4 +45,11 @@ namespace game
         ColorPrimary,
         ColorThird
     };
+
+    enum PieceTypes
+    {
+        Blank,
+        NormalPiece,
+        RotationPiece
+    };
 }
