@@ -18,7 +18,12 @@ GraphicInterface::GraphicInterface(SDL_Window* window) :
 {
     _colorsMap = {{ColorEnum::ColorBoard, {0x8c, 0x8a, 0x93, 0xFF}},
                   {ColorEnum::ColorPrimary, {0xd1, 0xf0, 0xb1, 0xFF}},
-                  {ColorEnum::ColorThird, {0xb6, 0xcb, 0x9e, 0xFF}}};
+                  {ColorEnum::ColorThird, {0xb6, 0xcb, 0x9e, 0xFF}},
+                  {ColorEnum::ColorSpecial, {0xa1, 0x3b, 0x69, 0xFF}}};
+
+    _piecesColorsMap = {{NormalPiece, ColorEnum::ColorPrimary},
+                        {RotationPiece, ColorEnum::ColorThird},
+                        {SpecialPiece, ColorEnum::ColorSpecial}};
 }
 
 SDL_Surface* GraphicInterface::SDL_LoadGameOverImage()
@@ -77,7 +82,7 @@ void GraphicInterface::DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnu
 
 void GraphicInterface::DrawBlock(Point point, int16_t blockType)
 {
-    ColorEnum currentPieceColor = blockType == NormalPiece ? ColorEnum::ColorPrimary : ColorEnum::ColorThird;
+    ColorEnum currentPieceColor = _piecesColorsMap[blockType];
 
     int16_t width = blockSize - blockMargin;
     int16_t height = blockSize - blockMargin;

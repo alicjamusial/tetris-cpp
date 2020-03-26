@@ -21,7 +21,12 @@ int16_t PieceDefinition::GetYInitialPosition(int16_t piece, int16_t rotation)
     return PieceDefinition::_piecesInitialPosition[piece][rotation][1];
 }
 
-const char PieceDefinition::_piecesTypes[7 /*kind */][4 /* rotation */][5 /* horizontal blocks */][5 /* vertical blocks */] = {
+const char PieceDefinition::_piecesTypes[8 /*kind */][4 /* rotation */][5 /* horizontal blocks */][5 /* vertical blocks */] = {
+    // Special square!
+    {{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
+     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
+     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
+     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}}},
     // Square
     {{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 2, 1, 0}, {0, 0, 1, 1, 0}, {0, 0, 0, 0, 0}},
      {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 2, 1, 0}, {0, 0, 1, 1, 0}, {0, 0, 0, 0, 0}},

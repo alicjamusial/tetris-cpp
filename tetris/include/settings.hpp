@@ -43,13 +43,15 @@ namespace game
     {
         ColorBoard,
         ColorPrimary,
-        ColorThird
+        ColorThird,
+        ColorSpecial
     };
 
     enum PieceTypes
     {
         Blank,
         NormalPiece,
-        RotationPiece
+        RotationPiece,
+        SpecialPiece
     };
 }

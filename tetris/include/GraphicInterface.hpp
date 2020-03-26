@@ -47,6 +47,7 @@ namespace game
                                              legendImgHeight};
 
         std::map<ColorEnum, std::vector<uint32_t>> _colorsMap;
+        std::map<int16_t, ColorEnum> _piecesColorsMap;
 
         void DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnum color);
 
