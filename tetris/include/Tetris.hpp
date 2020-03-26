@@ -3,6 +3,7 @@
 //
 #pragma once
 #include "SDL.h"
+#include <memory>
 #include <string>
 
 namespace game
@@ -10,15 +11,16 @@ namespace game
     class Tetris
     {
     public:
+        Tetris();
         ~Tetris();
 
         void GameInit();
         void GameRun();
 
     private:
-        std::string _windowTitle{"Tetris"};
+        std::unique_ptr<SDL_Window, decltype(&SDL_DestroyWindow)> _window;
 
         bool _running{true};
-        SDL_Window* _window{nullptr};
+        //        SDL_Window* _window{nullptr};
     };
 }
