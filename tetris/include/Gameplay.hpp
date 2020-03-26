@@ -18,7 +18,7 @@ namespace game
     class Gameplay
     {
     public:
-        Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface);
+        Gameplay(GraphicInterface& pGraphicInterface);
 
         void InitGameplay();
         void DrawScene();
@@ -53,7 +53,7 @@ namespace game
         Point _nextPoint{};
 
         std::unique_ptr<Board> _board;
-        std::shared_ptr<GraphicInterface> _graphicInterface;
+        GraphicInterface& _graphicInterface;
 
         void DrawPiece(Point point, int16_t piece, int16_t rotation);
 

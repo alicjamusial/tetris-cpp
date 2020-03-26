@@ -32,20 +32,18 @@ void Tetris::GameInit()
 
 void Tetris::GameRun()
 {
-    std::shared_ptr<GraphicInterface> graphicInterface =
-        std::make_shared<GraphicInterface>(_window.get());
-    std::unique_ptr<Gameplay> gameplay = std::make_unique<Gameplay>(graphicInterface);
+    GraphicInterface graphicInterface{_window.get()};
+    Gameplay gameplay(graphicInterface);
 
-    gameplay->InitGameplay();
+    gameplay.InitGameplay();
 
     float time1 = SDL_GetTicks();
-    float time2;
 
     while(_running)
     {
-        graphicInterface->ClearScreen();
-        gameplay->DrawScene();
-        graphicInterface->UpdateScreen();
+        graphicInterface.ClearScreen();
+        gameplay.DrawScene();
+        graphicInterface.UpdateScreen();
 
         SDL_Event event;
 
@@ -53,7 +51,7 @@ void Tetris::GameRun()
         {
             if(event.type == SDL_KEYDOWN)
             {
-                gameplay->CallAction(event.key.keysym.sym);
+                gameplay.CallAction(event.key.keysym.sym);
             }
             if(event.type == SDL_QUIT)
             {
@@ -61,11 +59,11 @@ void Tetris::GameRun()
             }
         }
 
-        time2 = SDL_GetTicks();
+        float time2 = SDL_GetTicks();
 
         if((time2 - time1) > timeInterval)
         {
-            gameplay->Fall();
+            gameplay.Fall();
             time1 = SDL_GetTicks();
         }
     }

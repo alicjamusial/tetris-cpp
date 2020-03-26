@@ -17,7 +17,7 @@ namespace game
     class GraphicInterface
     {
     public:
-        explicit GraphicInterface(SDL_Window* window);
+        GraphicInterface(SDL_Window* window);
 
         void DrawBoardLines();
         void DrawBlock(Point point, int16_t blockType);

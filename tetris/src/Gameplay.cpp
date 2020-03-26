@@ -8,12 +8,11 @@
 
 using namespace game;
 
-Gameplay::Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface) :
-    _distributionPiece(0, 7), _distributionRotation(0, 3), _board{std::make_unique<Board>()}
+Gameplay::Gameplay(GraphicInterface& pGraphicInterface) :
+    _distributionPiece(0, 7), _distributionRotation(0, 3), _board{std::make_unique<Board>()}, _graphicInterface(pGraphicInterface)
 {
     _board->CreateBoard();
     _engine.seed(_randomDevice());
-    _graphicInterface = pGraphicInterface;
     _gameAction = {{SDLK_d, &Gameplay::MoveRight},
                    {SDLK_a, &Gameplay::MoveLeft},
                    {SDLK_s, &Gameplay::MoveDown},
@@ -126,7 +125,7 @@ void Gameplay::DrawScene()
             DrawPiece(_nextPoint, _nextPiece, _nextRotation);
             break;
         case GameOver:
-            _graphicInterface->DrawGameOver();
+            _graphicInterface.DrawGameOver();
             break;
     }
 }
@@ -159,7 +158,7 @@ void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
 
                 int16_t x = mPixelsX + (i * blockSize) + boardLineWidth + blockMargin;
                 int16_t y = mPixelsY + j * blockSize;
-                _graphicInterface->DrawBlock(Point{x, y}, blockType);
+                _graphicInterface.DrawBlock(Point{x, y}, blockType);
             }
         }
     }
@@ -167,8 +166,8 @@ void Gameplay::DrawPiece(Point point, int16_t piece, int16_t rotation)
 
 void Gameplay::DrawBoardAndLegend()
 {
-    _graphicInterface->DrawLegend();
-    _graphicInterface->DrawBoardLines();
+    _graphicInterface.DrawLegend();
+    _graphicInterface.DrawBoardLines();
 
     for(int16_t i = 0; i < boardWidth; i++)
     {
@@ -179,7 +178,7 @@ void Gameplay::DrawBoardAndLegend()
             {
                 int16_t x = boardLineX1 + (i * blockSize) + boardLineWidth + blockMargin;
                 int16_t y = boardLineY1 + (j * blockSize);
-                _graphicInterface->DrawBlock(Point{x, y}, 1);
+                _graphicInterface.DrawBlock(Point{x, y}, 1);
             }
         }
     }
