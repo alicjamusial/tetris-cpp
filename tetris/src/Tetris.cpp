@@ -32,7 +32,8 @@ void Tetris::GameInit()
 
 void Tetris::GameRun()
 {
-    std::shared_ptr<GraphicInterface> graphicInterface = std::make_shared<GraphicInterface>(_window.get());
+    std::shared_ptr<GraphicInterface> graphicInterface =
+        std::make_shared<GraphicInterface>(_window.get());
     std::unique_ptr<Gameplay> gameplay = std::make_unique<Gameplay>(graphicInterface);
 
     gameplay->InitGameplay();

@@ -25,9 +25,17 @@ void Board::StorePiece(Point point, int16_t piece, int16_t rotation)
     {
         for(int16_t j1 = point.y, j2 = 0; j1 < point.y + pieceBlocks; j1++, j2++)
         {
-            if(PieceDefinition::GetBlockType(piece, rotation, j2, i2) != Blank)
+            if(PieceDefinition::GetBlockType(piece, rotation, j2, i2) == NormalPiece ||
+               PieceDefinition::GetBlockType(piece, rotation, j2, i2) == RotationPiece)
             {
                 _boardFields[i1][j1] = PositionStatus::PositionFilled;
+            }
+            else if(PieceDefinition::GetBlockType(piece, rotation, j2, i2) == SpecialPiece)
+            {
+                for(int16_t m = 0; m < boardHeight; m++)
+                {
+                    _boardFields[i1][m] = PositionStatus::PositionFree;
+                }
             }
         }
     }
@@ -60,8 +68,10 @@ void Board::DeletePossibleLines()
 {
     for(int16_t i = 0; i < boardHeight; i++)
     {
-        for(int16_t j = 0; j < boardWidth; j++) {
-            if(_boardFields[j][i] != PositionStatus::PositionFilled) {
+        for(int16_t j = 0; j < boardWidth; j++)
+        {
+            if(_boardFields[j][i] != PositionStatus::PositionFilled)
+            {
                 break;
             }
             if(j == boardWidth - 1)

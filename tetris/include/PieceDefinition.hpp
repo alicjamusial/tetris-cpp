@@ -21,6 +21,6 @@ namespace game
 
         // Displacement of the piece to the position where it is first drawn in the
         // board when it is created
-        const static int16_t _piecesInitialPosition[7 /*kind */][4 /* r2otation */][2 /* position */];
+        const static int16_t _piecesInitialPosition[8 /*kind */][4 /* r2otation */][2 /* position */];
     };
 }

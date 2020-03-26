@@ -10,8 +10,8 @@
 
 using namespace game;
 
-Gameplay::Gameplay(std::shared_ptr<GraphicInterface> &pGraphicInterface) : _distribution(0, 6),
-                                                                           _board{std::make_unique<Board>()}
+Gameplay::Gameplay(std::shared_ptr<GraphicInterface>& pGraphicInterface) :
+    _distribution(0, 6), _board{std::make_unique<Board>()}
 {
     _board->CreateBoard();
     _graphicInterface = pGraphicInterface;

@@ -23,10 +23,10 @@ int16_t PieceDefinition::GetYInitialPosition(int16_t piece, int16_t rotation)
 
 const char PieceDefinition::_piecesTypes[8 /*kind */][4 /* rotation */][5 /* horizontal blocks */][5 /* vertical blocks */] = {
     // Special square!
-    {{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
-     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
-     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
-     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}}},
+    {{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
+     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 3, 0}, {0, 0, 0, 3, 0}, {0, 0, 0, 0, 0}},
+     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 3, 0}, {0, 0, 0, 0, 0}},
+     {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 3, 0, 0}, {0, 0, 3, 0, 0}, {0, 0, 0, 0, 0}}},
     // Square
     {{{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 2, 1, 0}, {0, 0, 1, 1, 0}, {0, 0, 0, 0, 0}},
      {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 2, 1, 0}, {0, 0, 1, 1, 0}, {0, 0, 0, 0, 0}},
@@ -65,7 +65,9 @@ const char PieceDefinition::_piecesTypes[8 /*kind */][4 /* rotation */][5 /* hor
 
 // Displacement of the piece to the position where it is first drawn in the
 // board when it is created
-const int16_t PieceDefinition::_piecesInitialPosition[7 /*kind */][4 /* r2otation */][2 /* position */] = {
+const int16_t PieceDefinition::_piecesInitialPosition[8 /*kind */][4 /* r2otation */][2 /* position */] = {
+    /* SpecialSquere */
+    {{-2, -3}, {-2, -3}, {-2, -3}, {-2, -3}},
     /* Square */
     {{-2, -3}, {-2, -3}, {-2, -3}, {-2, -3}},
     /* I */
