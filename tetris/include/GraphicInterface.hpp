@@ -9,6 +9,7 @@
 #include "settings.hpp"
 #include <cstdint>
 #include <map>
+#include <memory>
 #include <vector>
 
 namespace game
@@ -33,7 +34,7 @@ namespace game
         void DrawLegend();
 
     private:
-        SDL_Renderer* _renderer{nullptr};
+        std::unique_ptr<SDL_Renderer, decltype(&SDL_DestroyRenderer)> _renderer;
         SDL_Surface* _gameOverImage{nullptr};
         SDL_Texture* _gameOverTexture{nullptr};
         SDL_Surface* _legendImage{nullptr};
