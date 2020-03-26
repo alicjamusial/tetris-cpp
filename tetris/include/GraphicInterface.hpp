@@ -51,9 +51,9 @@ namespace game
 
         void DrawBoardLine(Point point, int16_t w, int16_t h, ColorEnum color);
 
-        SDL_Surface* SDL_LoadGameOverImage();
-        SDL_Surface* SDL_LoadLegendImage();
-        SDL_Texture* SDL_LoadGameOverTexture();
-        SDL_Texture* SDL_LoadLegendTexture();
+        static std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> SDL_LoadGameOverImage();
+        static std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> SDL_LoadLegendImage();
+        std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> SDL_LoadGameOverTexture();
+        std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> SDL_LoadLegendTexture();
     };
 }

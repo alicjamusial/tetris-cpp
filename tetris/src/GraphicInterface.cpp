@@ -11,10 +11,10 @@ using namespace game;
 
 GraphicInterface::GraphicInterface(SDL_Window* window) :
     _renderer{SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED), SDL_DestroyRenderer},
-    _gameOverImage{GraphicInterface::SDL_LoadGameOverImage(), SDL_FreeSurface},
-    _legendImage{GraphicInterface::SDL_LoadLegendImage(), SDL_FreeSurface},
-    _gameOverTexture{GraphicInterface::SDL_LoadGameOverTexture(), SDL_DestroyTexture},
-    _legendTexture{GraphicInterface::SDL_LoadLegendTexture(), SDL_DestroyTexture}
+    _gameOverImage{GraphicInterface::SDL_LoadGameOverImage()},
+    _legendImage{GraphicInterface::SDL_LoadLegendImage()},
+    _gameOverTexture{GraphicInterface::SDL_LoadGameOverTexture()},
+    _legendTexture{GraphicInterface::SDL_LoadLegendTexture()}
 {
     _colorsMap = {{ColorEnum::ColorBoard, {0x8c, 0x8a, 0x93, 0xFF}},
                   {ColorEnum::ColorPrimary, {0xd1, 0xf0, 0xb1, 0xFF}},
@@ -26,30 +26,34 @@ GraphicInterface::GraphicInterface(SDL_Window* window) :
                         {SpecialPiece, ColorEnum::ColorSpecial}};
 }
 
-SDL_Surface* GraphicInterface::SDL_LoadGameOverImage()
+std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> GraphicInterface::SDL_LoadGameOverImage()
 {
     char* path = SDL_GetBasePath();
     std::string gameOverImg = "assets\\game_over.bmp";
     std::string gameOverPath = std::string(path) + gameOverImg;
-    return SDL_LoadBMP(gameOverPath.c_str());
+    SDL_Surface* gameOverSurface = SDL_LoadBMP(gameOverPath.c_str());
+    return {gameOverSurface, SDL_FreeSurface};
 }
 
-SDL_Surface* GraphicInterface::SDL_LoadLegendImage()
+std::unique_ptr<SDL_Surface, decltype(&SDL_FreeSurface)> GraphicInterface::SDL_LoadLegendImage()
 {
     char* path = SDL_GetBasePath();
     std::string legendImg = "assets\\legend.bmp";
     std::string legendPath = std::string(path) + legendImg;
-    return SDL_LoadBMP(legendPath.c_str());
+    SDL_Surface* legendSurface = SDL_LoadBMP(legendPath.c_str());
+    return {legendSurface, SDL_FreeSurface};
 }
 
-SDL_Texture* GraphicInterface::SDL_LoadGameOverTexture()
+std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> GraphicInterface::SDL_LoadGameOverTexture()
 {
-    return SDL_CreateTextureFromSurface(_renderer.get(), _gameOverImage.get());
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(_renderer.get(), _gameOverImage.get());
+    return {texture, SDL_DestroyTexture};
 }
 
-SDL_Texture* GraphicInterface::SDL_LoadLegendTexture()
+std::unique_ptr<SDL_Texture, decltype(&SDL_DestroyTexture)> GraphicInterface::SDL_LoadLegendTexture()
 {
-    return SDL_CreateTextureFromSurface(_renderer.get(), _legendImage.get());
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(_renderer.get(), _legendImage.get());
+    return {texture, SDL_DestroyTexture};
 }
 
 void GraphicInterface::ClearScreen()
