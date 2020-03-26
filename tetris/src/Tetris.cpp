@@ -32,11 +32,9 @@ void Tetris::GameInit()
 
 void Tetris::GameRun()
 {
-    Board board;
     std::shared_ptr<GraphicInterface> graphicInterface = std::make_shared<GraphicInterface>(_window.get());
-    std::unique_ptr<Gameplay> gameplay = std::make_unique<Gameplay>(&board, graphicInterface);
+    std::unique_ptr<Gameplay> gameplay = std::make_unique<Gameplay>(graphicInterface);
 
-    board.CreateBoard();
     gameplay->InitGameplay();
 
     float time1 = SDL_GetTicks();

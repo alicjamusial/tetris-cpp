@@ -10,9 +10,10 @@
 
 using namespace game;
 
-Gameplay::Gameplay(Board* pBoard, std::shared_ptr<GraphicInterface> &pGraphicInterface) : _distribution(0, 6)
+Gameplay::Gameplay(std::shared_ptr<GraphicInterface> &pGraphicInterface) : _distribution(0, 6),
+                                                                           _board{std::make_unique<Board>()}
 {
-    _board = pBoard;
+    _board->CreateBoard();
     _graphicInterface = pGraphicInterface;
     _gameAction = {{SDLK_d, &Gameplay::MoveRight},
                    {SDLK_a, &Gameplay::MoveLeft},
@@ -24,8 +25,6 @@ Gameplay::Gameplay(Board* pBoard, std::shared_ptr<GraphicInterface> &pGraphicInt
 
 void Gameplay::InitGameplay()
 {
-    srand((unsigned int)time(nullptr));
-
     // Init current falling currentPiece
     currentPiece = GetRand();
     currentRotation = GetRand(2);

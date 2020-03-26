@@ -18,7 +18,7 @@ namespace game
     class Gameplay
     {
     public:
-        Gameplay(Board* pBoard, std::shared_ptr<GraphicInterface> &pGraphicInterface);
+        Gameplay(std::shared_ptr<GraphicInterface> &pGraphicInterface);
 
         void InitGameplay();
         void DrawScene();
@@ -51,7 +51,7 @@ namespace game
         int16_t _nextPiece{}, _nextRotation{};
         Point _nextPoint{};
 
-        Board* _board;
+        std::unique_ptr<Board> _board;
         std::shared_ptr<GraphicInterface> _graphicInterface;
 
         void DrawPiece(Point point, int16_t piece, int16_t rotation);
