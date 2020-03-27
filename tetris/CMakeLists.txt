@@ -29,3 +29,4 @@ target_include_directories(${NAME} PRIVATE include)
 target_link_libraries(${NAME} SDL2-static)
 
 set_property(TARGET ${NAME} PROPERTY CXX_STANDARD 14)
+set_property(TARGET ${NAME} PROPERTY RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/out")

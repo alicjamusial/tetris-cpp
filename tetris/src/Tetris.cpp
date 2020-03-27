@@ -37,7 +37,7 @@ void Tetris::GameRun()
 
     gameplay.InitGameplay();
 
-    float time1 = SDL_GetTicks();
+    uint32_t time1 = SDL_GetTicks();
 
     while(_running)
     {
@@ -59,7 +59,7 @@ void Tetris::GameRun()
             }
         }
 
-        float time2 = SDL_GetTicks();
+        uint32_t time2 = SDL_GetTicks();
 
         if((time2 - time1) > timeInterval)
         {
