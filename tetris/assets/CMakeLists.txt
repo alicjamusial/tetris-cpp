@@ -1,5 +1,4 @@
-file(GLOB files *.bmp)
+set(files "game_over.bmp" "legend.bmp")
 foreach(file ${files})
-    get_filename_component(fileName ${file} NAME)
-    configure_file(${fileName} ${fileName} COPYONLY)
+    configure_file(${file} ${file} COPYONLY)
 endforeach()
