@@ -185,10 +185,10 @@ void Gameplay::DrawBoardAndLegend()
 
 void Gameplay::CallAction(uint16_t key)
 {
-    auto action = _gameAction[key];
-    if(action)
+    auto action = _gameAction.find(key);
+    if(action != _gameAction.end())
     {
-        (this->*action)();
+        (this->*action->second)();
     }
 }
 
